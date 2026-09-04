@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/health",
+      "destination": "https://ai-revenue-recovery-x3r0.onrender.com/api/system/health"
+    },
+    {
+      "source": "/api/:path*",
+      "destination": "https://ai-revenue-recovery-x3r0.onrender.com/api/:path*"
+    }
+  ]
+}
