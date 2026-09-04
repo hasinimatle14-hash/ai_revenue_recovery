@@ -17,12 +17,17 @@ allowed_origins = [
     "http://127.0.0.1:5173",
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+    "https://ai-revenue-recovery-3e6npz7vm-a-3b71.vercel.app",
+    "https://ai-revenue-recovery-hmjv2yc91-a-3b71.vercel.app",
 ]
+
+vercel_origin_regex = r"https://.*\.vercel\.app"
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=allowed_origins,
-    allow_credentials=True,
+    allow_origin_regex=vercel_origin_regex,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
