@@ -63,11 +63,13 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ isBackendOnline }) =
     learningVersion: string;
   }>({ status: 'loading', strategiesGenerated: 0, learningVersion: 'strategy-v1.0' });
 
+  const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+
   React.useEffect(() => {
     let active = true;
     const fetchAnalytics = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/analytics/summary');
+        const response = await fetch(`${API_BASE_URL}/api/analytics/summary`);
         if (response.ok && active) {
           const data = await response.json();
           setAnalytics(data);
@@ -85,7 +87,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ isBackendOnline }) =
     let active = true;
     const fetchAgentStatus = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/agent/status');
+        const response = await fetch(`${API_BASE_URL}/api/agent/status`);
         if (response.ok && active) {
           const data = await response.json();
           setAgentStatus({
@@ -103,7 +105,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ isBackendOnline }) =
     };
     const fetchReviewsStatus = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/reviews/status');
+        const response = await fetch(`${API_BASE_URL}/api/reviews/status`);
         if (response.ok && active) {
           const data = await response.json();
           setReviewsStatus({
@@ -121,7 +123,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ isBackendOnline }) =
     };
     const fetchStrategyStatus = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/strategy/status');
+        const response = await fetch(`${API_BASE_URL}/api/strategy/status`);
         if (response.ok && active) {
           const data = await response.json();
           setStrategyStatus({
@@ -160,7 +162,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ isBackendOnline }) =
     
     const fetchRecoveryStatus = async () => {
       try {
-        const response = await fetch('/api/recovery/status');
+        const response = await fetch(`${API_BASE_URL}/api/recovery/status`);
         if (response.ok && active) {
           const data = await response.json();
           setRecoveryStatus({
@@ -170,20 +172,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ isBackendOnline }) =
           });
         }
       } catch (err) {
-        try {
-          const response = await fetch('http://localhost:8000/api/recovery/status');
-          if (response.ok && active) {
-            const data = await response.json();
-            setRecoveryStatus({
-              status: data.status,
-              eventsProcessed: data.events_processed,
-              decisionsGenerated: data.decisions_generated
-            });
-            return;
-          }
-        } catch (e) {
-          console.warn("Failed to fetch recovery status:", e);
-        }
+        console.warn("Failed to fetch recovery status:", err);
         if (active) {
           setRecoveryStatus({ status: 'not_ready', eventsProcessed: 0, decisionsGenerated: 0 });
         }
@@ -213,7 +202,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ isBackendOnline }) =
     
     const fetchExecutionStatus = async () => {
       try {
-        const response = await fetch('/api/recovery/execution/status');
+        const response = await fetch(`${API_BASE_URL}/api/recovery/execution/status`);
         if (response.ok && active) {
           const data = await response.json();
           setExecutionStatus({
@@ -224,21 +213,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ isBackendOnline }) =
           });
         }
       } catch (err) {
-        try {
-          const response = await fetch('http://localhost:8000/api/recovery/execution/status');
-          if (response.ok && active) {
-            const data = await response.json();
-            setExecutionStatus({
-              status: data.status,
-              eventsProcessed: data.events_processed,
-              attemptsCreated: data.attempts_created,
-              simulatedRevenue: data.simulated_revenue_recovered
-            });
-            return;
-          }
-        } catch (e) {
-          console.warn("Failed to fetch execution status:", e);
-        }
+        console.warn("Failed to fetch execution status:", err);
         if (active) {
           setExecutionStatus({ status: 'not_ready', eventsProcessed: 0, attemptsCreated: 0, simulatedRevenue: 0.0 });
         }
@@ -268,7 +243,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ isBackendOnline }) =
     
     const fetchStatus = async () => {
       try {
-        const response = await fetch('/api/diagnosis/status');
+        const response = await fetch(`${API_BASE_URL}/api/diagnosis/status`);
         if (response.ok && active) {
           const data = await response.json();
           setDiagnosisStatus({
@@ -278,20 +253,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ isBackendOnline }) =
           });
         }
       } catch (err) {
-        try {
-          const response = await fetch('http://localhost:8000/api/diagnosis/status');
-          if (response.ok && active) {
-            const data = await response.json();
-            setDiagnosisStatus({
-              status: data.status,
-              eventsAnalyzed: data.events_analyzed,
-              diagnosesGenerated: data.diagnoses_generated
-            });
-            return;
-          }
-        } catch (e) {
-          console.warn("Failed to fetch diagnosis status:", e);
-        }
+        console.warn("Failed to fetch diagnosis status:", err);
         if (active) {
           setDiagnosisStatus({ status: 'not_ready', eventsAnalyzed: 0, diagnosesGenerated: 0 });
         }

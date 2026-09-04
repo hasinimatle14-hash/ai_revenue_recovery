@@ -47,7 +47,8 @@ export const RevenueAtRiskPage: React.FC<RevenueAtRiskPageProps> = ({ onViewRun 
     let active = true;
     const fetchRuns = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/recovery/runs');
+        const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+        const response = await fetch(`${API_BASE_URL}/api/recovery/runs`);
         if (!response.ok) {
           throw new Error('Failed to fetch revenue-at-risk dataset.');
         }

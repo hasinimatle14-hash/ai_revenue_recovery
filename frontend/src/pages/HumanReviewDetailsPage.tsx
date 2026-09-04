@@ -35,13 +35,14 @@ export const HumanReviewDetailsPage: React.FC<HumanReviewDetailsPageProps> = ({ 
     let active = true;
     const fetchReviewDetails = async () => {
       try {
-        const resReview = await fetch(`http://localhost:8000/api/reviews/${reviewId}`);
+        const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+        const resReview = await fetch(`${API_BASE_URL}/api/reviews/${reviewId}`);
         if (!resReview.ok) {
           throw new Error(`Failed to load human review details for ID: ${reviewId}`);
         }
         const dataReview = await resReview.json();
         
-        const resEvent = await fetch(`http://localhost:8000/api/recovery/runs/${dataReview.event_id}`);
+        const resEvent = await fetch(`${API_BASE_URL}/api/recovery/runs/${dataReview.event_id}`);
         if (!resEvent.ok) {
           throw new Error(`Failed to load event pipeline details for ID: ${dataReview.event_id}`);
         }

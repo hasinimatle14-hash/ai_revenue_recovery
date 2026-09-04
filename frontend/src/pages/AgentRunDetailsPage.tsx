@@ -45,9 +45,10 @@ export const AgentRunDetailsPage: React.FC<AgentRunDetailsPageProps> = ({ eventI
     let active = true;
     const fetchRunDetails = async () => {
       try {
-        const resRun = await fetch(`http://localhost:8000/api/agent/runs/${eventId}`);
-        const resEvent = await fetch(`http://localhost:8000/api/recovery/runs/${eventId}`);
-        const resTimeline = await fetch(`http://localhost:8000/api/agent/runs/${eventId}/timeline`);
+        const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+        const resRun = await fetch(`${API_BASE_URL}/api/agent/runs/${eventId}`);
+        const resEvent = await fetch(`${API_BASE_URL}/api/recovery/runs/${eventId}`);
+        const resTimeline = await fetch(`${API_BASE_URL}/api/agent/runs/${eventId}/timeline`);
         
         if (!resRun.ok || !resEvent.ok || !resTimeline.ok) {
           throw new Error(`Failed to load AI Agent run parameters for ID: ${eventId}`);

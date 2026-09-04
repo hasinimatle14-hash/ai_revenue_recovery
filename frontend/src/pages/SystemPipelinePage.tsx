@@ -20,7 +20,8 @@ export const SystemPipelinePage: React.FC = () => {
     let active = true;
     const fetchPipeline = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/system/pipeline');
+        const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+        const response = await fetch(`${API_BASE_URL}/api/system/pipeline`);
         if (!response.ok) {
           throw new Error('Failed to load system pipeline progression stages.');
         }

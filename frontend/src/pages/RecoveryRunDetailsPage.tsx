@@ -49,7 +49,8 @@ export const RecoveryRunDetailsPage: React.FC<RecoveryRunDetailsPageProps> = ({ 
     let active = true;
     const fetchRun = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/api/recovery/runs/${eventId}`);
+        const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+        const response = await fetch(`${API_BASE_URL}/api/recovery/runs/${eventId}`);
         if (!response.ok) {
           throw new Error(`Failed to load recovery run details for ID: ${eventId}`);
         }

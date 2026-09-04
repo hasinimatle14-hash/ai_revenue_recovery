@@ -58,7 +58,8 @@ export const ControlCenterPage: React.FC<ControlCenterPageProps> = ({ onNavigate
     let active = true;
     const fetchSummary = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/control-center/summary');
+        const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+        const response = await fetch(`${API_BASE_URL}/api/control-center/summary`);
         if (!response.ok) {
           throw new Error('Failed to load Recovery Control Center summary payload.');
         }

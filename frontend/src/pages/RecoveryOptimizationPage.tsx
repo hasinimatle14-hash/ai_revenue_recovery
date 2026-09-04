@@ -39,9 +39,10 @@ export const RecoveryOptimizationPage: React.FC = () => {
     let active = true;
     const fetchOptimizationData = async () => {
       try {
-        const resGlobal = await fetch('http://localhost:8000/api/optimization/summary');
-        const resInterv = await fetch('http://localhost:8000/api/optimization/interventions');
-        const resRecs = await fetch('http://localhost:8000/api/optimization/recommendations');
+        const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+        const resGlobal = await fetch(`${API_BASE_URL}/api/optimization/summary`);
+        const resInterv = await fetch(`${API_BASE_URL}/api/optimization/interventions`);
+        const resRecs = await fetch(`${API_BASE_URL}/api/optimization/recommendations`);
         
         if (!resGlobal.ok || !resInterv.ok || !resRecs.ok) {
           throw new Error('Failed to load Recovery Optimization insights.');

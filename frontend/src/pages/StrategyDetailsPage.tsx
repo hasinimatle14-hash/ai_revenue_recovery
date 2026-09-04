@@ -31,7 +31,8 @@ export const StrategyDetailsPage: React.FC<StrategyDetailsPageProps> = ({ strate
     let active = true;
     const fetchDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/api/strategies/${strategyId}`);
+        const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+        const response = await fetch(`${API_BASE_URL}/api/strategies/${strategyId}`);
         if (!response.ok) {
           throw new Error(`Failed to load details for strategy ID: ${strategyId}`);
         }

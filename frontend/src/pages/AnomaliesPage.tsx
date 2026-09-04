@@ -22,7 +22,8 @@ export const AnomaliesPage: React.FC = () => {
 
   const fetchAnomalies = async () => {
     try {
-      let url = 'http://localhost:8000/api/anomalies';
+      const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+      let url = `${API_BASE_URL}/api/anomalies`;
       const params = new URLSearchParams();
       if (severityFilter !== 'all') params.append('severity', severityFilter);
       if (statusFilter !== 'all') params.append('status', statusFilter);

@@ -45,8 +45,9 @@ export const AdaptiveStrategyPage: React.FC<AdaptiveStrategyPageProps> = ({
     let active = true;
     const fetchData = async () => {
       try {
-        const resSum = await fetch('http://localhost:8000/api/strategy/learning');
-        const resStr = await fetch('http://localhost:8000/api/strategies');
+        const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+        const resSum = await fetch(`${API_BASE_URL}/api/strategy/learning`);
+        const resStr = await fetch(`${API_BASE_URL}/api/strategies`);
         if (!resSum.ok || !resStr.ok) {
           throw new Error('Failed to ingest strategy engine summaries.');
         }

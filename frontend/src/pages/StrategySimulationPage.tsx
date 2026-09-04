@@ -37,7 +37,8 @@ export const StrategySimulationPage: React.FC<StrategySimulationPageProps> = ({ 
     let active = true;
     const fetchSim = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/strategy/simulation');
+        const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+        const response = await fetch(`${API_BASE_URL}/api/strategy/simulation`);
         if (!response.ok) {
           throw new Error('Failed to load what-if strategy simulation projection models.');
         }

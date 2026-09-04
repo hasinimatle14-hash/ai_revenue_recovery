@@ -39,8 +39,9 @@ export const RecoveryAgentPage: React.FC<RecoveryAgentPageProps> = ({ onViewRun,
     let active = true;
     const fetchAgentData = async () => {
       try {
-        const resRuns = await fetch('http://localhost:8000/api/agent/runs');
-        const resStatus = await fetch('http://localhost:8000/api/agent/status');
+        const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+        const resRuns = await fetch(`${API_BASE_URL}/api/agent/runs`);
+        const resStatus = await fetch(`${API_BASE_URL}/api/agent/status`);
         if (!resRuns.ok || !resStatus.ok) {
           throw new Error('Failed to fetch AI Recovery Agent datasets.');
         }

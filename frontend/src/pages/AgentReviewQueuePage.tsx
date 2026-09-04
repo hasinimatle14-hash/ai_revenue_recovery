@@ -25,9 +25,11 @@ export const AgentReviewQueuePage: React.FC<AgentReviewQueuePageProps> = ({ onVi
   const [error, setError] = useState<string | null>(null);
   const [notification, setNotification] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
 
+  const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+
   const fetchQueue = async () => {
     try {
-      const response = await fetch('http://localhost:8000/api/reviews');
+      const response = await fetch(`${API_BASE_URL}/api/reviews`);
       if (!response.ok) {
         throw new Error('Failed to load persistent review queue.');
       }
@@ -54,7 +56,7 @@ export const AgentReviewQueuePage: React.FC<AgentReviewQueuePageProps> = ({ onVi
       : 'Rejected: Overrides suggest elevated risk margins.';
       
     try {
-      const response = await fetch(`http://localhost:8000/api/reviews/${reviewId}/decision`, {
+      const response = await fetch(`${API_BASE_URL}/api/reviews/${reviewId}/decision`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
