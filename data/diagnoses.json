@@ -1,0 +1,1202 @@
+[
+  {
+    "diagnosis_id": "DGN-0001",
+    "event_id": "EVT-0001",
+    "root_cause": "genuine_non_payment_intent",
+    "confidence": 0.49,
+    "reasoning": "The invoice has remained unpaid for 35 days with decline code 'customer_dispute'. With previous recovery attempts (2) yielding no response, this is diagnosed as genuine non-payment intent, requiring collections escalation.",
+    "recommended_intervention": "human_collections_review",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0002",
+    "event_id": "EVT-0002",
+    "root_cause": "technical_failure",
+    "confidence": 0.92,
+    "reasoning": "The transaction was interrupted by a network or authentication 'network_error'. The customer's strong payment history (98%) confirms transaction intent, indicating a transient gateway drop. Recommending technical retry.",
+    "recommended_intervention": "technical_retry",
+    "recoverability": "high",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0003",
+    "event_id": "EVT-0003",
+    "root_cause": "insufficient_funds",
+    "confidence": 0.76,
+    "reasoning": "The transaction failed with an 'insufficient_funds' error. Since the customer (retail) has a strong history of payment success (84%) and only 3 previous recovery attempts, this is diagnosed as a transient insufficient funds issue. A delayed retry is recommended during standard billing hours.",
+    "recommended_intervention": "delayed_retry",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0004",
+    "event_id": "EVT-0004",
+    "root_cause": "expired_or_invalid_payment_method",
+    "confidence": 0.76,
+    "reasoning": "The payment channel 'bank_transfer' declined due to 'card_expired'. This indicates the card details on file are expired or incorrect. Since this affects recurring billing for segment 'SMB', we recommend prompting the customer to update their billing credentials.",
+    "recommended_intervention": "payment_method_update",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0005",
+    "event_id": "EVT-0005",
+    "root_cause": "genuine_non_payment_intent",
+    "confidence": 0.6,
+    "reasoning": "The customer abandoned the payment flow with 'price_shock'. Due to repeated attempts (0) and a moderate history success rate (68%), this points to a genuine lack of transaction intent.",
+    "recommended_intervention": "payment_plan_offer",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0006",
+    "event_id": "EVT-0006",
+    "root_cause": "genuine_non_payment_intent",
+    "confidence": 0.45,
+    "reasoning": "The invoice has remained unpaid for 18 days with decline code 'invoice_unpaid'. With previous recovery attempts (1) yielding no response, this is diagnosed as genuine non-payment intent, requiring collections escalation.",
+    "recommended_intervention": "invoice_reminder",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0007",
+    "event_id": "EVT-0007",
+    "root_cause": "issuer_risk_flag",
+    "confidence": 0.8,
+    "reasoning": "The domestic payment failed due to 'risk_flagged' from the card issuer. The customer has a success rate of 56%, indicating a low-risk profile historically. Recommending alternative payment method selection.",
+    "recommended_intervention": "alternative_payment_method",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0008",
+    "event_id": "EVT-0008",
+    "root_cause": "timezone_timing_issue",
+    "confidence": 0.45,
+    "reasoning": "The transaction failed late at night in customer's local timezone (Europe/London) with decline code 'issuer_declined'. This indicates a timing-related card limit trigger. Recommend scheduling retry for customer's business hours.",
+    "recommended_intervention": "delayed_retry",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0009",
+    "event_id": "EVT-0009",
+    "root_cause": "genuine_non_payment_intent",
+    "confidence": 0.87,
+    "reasoning": "The invoice has remained unpaid for 18 days with decline code 'invoice_unpaid'. With previous recovery attempts (1) yielding no response, this is diagnosed as genuine non-payment intent, requiring collections escalation.",
+    "recommended_intervention": "invoice_reminder",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0010",
+    "event_id": "EVT-0010",
+    "root_cause": "genuine_non_payment_intent",
+    "confidence": 0.98,
+    "reasoning": "The invoice has remained unpaid for 18 days with decline code 'customer_dispute'. With previous recovery attempts (0) yielding no response, this is diagnosed as genuine non-payment intent, requiring collections escalation.",
+    "recommended_intervention": "invoice_reminder",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0011",
+    "event_id": "EVT-0011",
+    "root_cause": "insufficient_funds",
+    "confidence": 0.8,
+    "reasoning": "The transaction failed with an 'insufficient_funds' error. Since the customer (retail) has a strong history of payment success (65%) and only 0 previous recovery attempts, this is diagnosed as a transient insufficient funds issue. A delayed retry is recommended during standard billing hours.",
+    "recommended_intervention": "delayed_retry",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0012",
+    "event_id": "EVT-0012",
+    "root_cause": "technical_failure",
+    "confidence": 0.65,
+    "reasoning": "The transaction was interrupted by a network or authentication 'authentication_failed'. The customer's strong payment history (25%) confirms transaction intent, indicating a transient gateway drop. Recommending technical retry.",
+    "recommended_intervention": "technical_retry",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0013",
+    "event_id": "EVT-0013",
+    "root_cause": "genuine_non_payment_intent",
+    "confidence": 0.89,
+    "reasoning": "The invoice has remained unpaid for 12 days with decline code 'customer_dispute'. With previous recovery attempts (3) yielding no response, this is diagnosed as genuine non-payment intent, requiring collections escalation.",
+    "recommended_intervention": "invoice_reminder",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0014",
+    "event_id": "EVT-0014",
+    "root_cause": "genuine_non_payment_intent",
+    "confidence": 0.9,
+    "reasoning": "The invoice has remained unpaid for 5 days with decline code 'invoice_unpaid'. With previous recovery attempts (0) yielding no response, this is diagnosed as genuine non-payment intent, requiring collections escalation.",
+    "recommended_intervention": "invoice_reminder",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0015",
+    "event_id": "EVT-0015",
+    "root_cause": "checkout_friction",
+    "confidence": 0.67,
+    "reasoning": "The customer abandoned the checkout during the 'payment_method_selection' stage due to 'payment_method_unavailable'. This suggests friction in the payment flow. A soft nudge or offering alternative checkouts should reduce abandonment.",
+    "recommended_intervention": "friction_reducing_nudge",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0016",
+    "event_id": "EVT-0016",
+    "root_cause": "technical_failure",
+    "confidence": 0.77,
+    "reasoning": "The transaction was interrupted by a network or authentication 'authentication_failed'. The customer's strong payment history (61%) confirms transaction intent, indicating a transient gateway drop. Recommending technical retry.",
+    "recommended_intervention": "technical_retry",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0017",
+    "event_id": "EVT-0017",
+    "root_cause": "expired_or_invalid_payment_method",
+    "confidence": 0.79,
+    "reasoning": "The payment channel 'bank_transfer' declined due to 'card_invalid'. This indicates the card details on file are expired or incorrect. Since this affects recurring billing for segment 'SMB', we recommend prompting the customer to update their billing credentials.",
+    "recommended_intervention": "payment_method_update",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0018",
+    "event_id": "EVT-0018",
+    "root_cause": "payment_method_mismatch",
+    "confidence": 0.75,
+    "reasoning": "A payment method conflict occurred. The customer from UAE attempted payment with 'international_card' which is unavailable internationally. Recommend updating checkout details to suggest international cards.",
+    "recommended_intervention": "payment_method_update",
+    "recoverability": "high",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0019",
+    "event_id": "EVT-0019",
+    "root_cause": "timezone_timing_issue",
+    "confidence": 0.45,
+    "reasoning": "The transaction failed late at night in customer's local timezone (America/New_York) with decline code 'issuer_declined'. This indicates a timing-related card limit trigger. Recommend scheduling retry for customer's business hours.",
+    "recommended_intervention": "delayed_retry",
+    "recoverability": "high",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0020",
+    "event_id": "EVT-0020",
+    "root_cause": "genuine_non_payment_intent",
+    "confidence": 0.59,
+    "reasoning": "The invoice has remained unpaid for 50 days with decline code 'invoice_unpaid'. With previous recovery attempts (2) yielding no response, this is diagnosed as genuine non-payment intent, requiring collections escalation.",
+    "recommended_intervention": "human_collections_review",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0021",
+    "event_id": "EVT-0021",
+    "root_cause": "expired_or_invalid_payment_method",
+    "confidence": 0.85,
+    "reasoning": "The payment channel 'international_card' declined due to 'card_expired'. This indicates the card details on file are expired or incorrect. Since this affects recurring billing for segment 'retail', we recommend prompting the customer to update their billing credentials.",
+    "recommended_intervention": "payment_method_update",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0022",
+    "event_id": "EVT-0022",
+    "root_cause": "genuine_non_payment_intent",
+    "confidence": 0.75,
+    "reasoning": "The customer abandoned the payment flow with 'checkout_friction'. Due to repeated attempts (0) and a moderate history success rate (30%), this points to a genuine lack of transaction intent.",
+    "recommended_intervention": "invoice_reminder",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0023",
+    "event_id": "EVT-0023",
+    "root_cause": "payment_method_mismatch",
+    "confidence": 0.72,
+    "reasoning": "A payment method conflict occurred. The customer from UAE attempted payment with 'international_card' which is unavailable internationally. Recommend updating checkout details to suggest international cards.",
+    "recommended_intervention": "payment_method_update",
+    "recoverability": "high",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0024",
+    "event_id": "EVT-0024",
+    "root_cause": "insufficient_funds",
+    "confidence": 0.71,
+    "reasoning": "The transaction failed with an 'insufficient_funds' error. Since the customer (retail) has a strong history of payment success (46%) and only 3 previous recovery attempts, this is diagnosed as a transient insufficient funds issue. A delayed retry is recommended during standard billing hours.",
+    "recommended_intervention": "delayed_retry",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0025",
+    "event_id": "EVT-0025",
+    "root_cause": "insufficient_funds",
+    "confidence": 0.77,
+    "reasoning": "The transaction failed with an 'customer_cashflow_issue' error. Since the customer (SMB) has a strong history of payment success (22%) and only 1 previous recovery attempts, this is diagnosed as a transient insufficient funds issue. A delayed retry is recommended during standard billing hours.",
+    "recommended_intervention": "payment_plan_offer",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0026",
+    "event_id": "EVT-0026",
+    "root_cause": "insufficient_funds",
+    "confidence": 0.71,
+    "reasoning": "The transaction failed with an 'insufficient_funds' error. Since the customer (SMB) has a strong history of payment success (22%) and only 3 previous recovery attempts, this is diagnosed as a transient insufficient funds issue. A delayed retry is recommended during standard billing hours.",
+    "recommended_intervention": "delayed_retry",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0027",
+    "event_id": "EVT-0027",
+    "root_cause": "insufficient_funds",
+    "confidence": 0.87,
+    "reasoning": "The transaction failed with an 'insufficient_funds' error. Since the customer (retail) has a strong history of payment success (28%) and only 1 previous recovery attempts, this is diagnosed as a transient insufficient funds issue. A delayed retry is recommended during standard billing hours.",
+    "recommended_intervention": "delayed_retry",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0028",
+    "event_id": "EVT-0028",
+    "root_cause": "genuine_non_payment_intent",
+    "confidence": 0.61,
+    "reasoning": "The invoice has remained unpaid for 5 days with decline code 'invoice_unpaid'. With previous recovery attempts (3) yielding no response, this is diagnosed as genuine non-payment intent, requiring collections escalation.",
+    "recommended_intervention": "invoice_reminder",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0029",
+    "event_id": "EVT-0029",
+    "root_cause": "genuine_non_payment_intent",
+    "confidence": 0.45,
+    "reasoning": "The customer abandoned the payment flow with 'issuer_declined'. Due to repeated attempts (1) and a moderate history success rate (39%), this points to a genuine lack of transaction intent.",
+    "recommended_intervention": "invoice_reminder",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0030",
+    "event_id": "EVT-0030",
+    "root_cause": "insufficient_funds",
+    "confidence": 0.77,
+    "reasoning": "The transaction failed with an 'insufficient_funds' error. Since the customer (enterprise) has a strong history of payment success (56%) and only 1 previous recovery attempts, this is diagnosed as a transient insufficient funds issue. A delayed retry is recommended during standard billing hours.",
+    "recommended_intervention": "delayed_retry",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0031",
+    "event_id": "EVT-0031",
+    "root_cause": "checkout_friction",
+    "confidence": 0.6,
+    "reasoning": "The customer abandoned the checkout during the 'payment_method_selection' stage due to 'checkout_friction'. This suggests friction in the payment flow. A soft nudge or offering alternative checkouts should reduce abandonment.",
+    "recommended_intervention": "friction_reducing_nudge",
+    "recoverability": "high",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0032",
+    "event_id": "EVT-0032",
+    "root_cause": "technical_failure",
+    "confidence": 0.8,
+    "reasoning": "The transaction was interrupted by a network or authentication 'network_error'. The customer's strong payment history (56%) confirms transaction intent, indicating a transient gateway drop. Recommending technical retry.",
+    "recommended_intervention": "technical_retry",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0033",
+    "event_id": "EVT-0033",
+    "root_cause": "genuine_non_payment_intent",
+    "confidence": 0.77,
+    "reasoning": "The invoice has remained unpaid for 75 days with decline code 'customer_dispute'. With previous recovery attempts (1) yielding no response, this is diagnosed as genuine non-payment intent, requiring collections escalation.",
+    "recommended_intervention": "human_collections_review",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0034",
+    "event_id": "EVT-0034",
+    "root_cause": "genuine_non_payment_intent",
+    "confidence": 0.45,
+    "reasoning": "The customer abandoned the payment flow with 'issuer_declined'. Due to repeated attempts (0) and a moderate history success rate (28%), this points to a genuine lack of transaction intent.",
+    "recommended_intervention": "invoice_reminder",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0035",
+    "event_id": "EVT-0035",
+    "root_cause": "checkout_friction",
+    "confidence": 0.7,
+    "reasoning": "The customer abandoned the checkout during the 'payment_method_selection' stage due to 'payment_method_unavailable'. This suggests friction in the payment flow. A soft nudge or offering alternative checkouts should reduce abandonment.",
+    "recommended_intervention": "friction_reducing_nudge",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0036",
+    "event_id": "EVT-0036",
+    "root_cause": "technical_failure",
+    "confidence": 0.95,
+    "reasoning": "The transaction was interrupted by a network or authentication 'authentication_failed'. The customer's strong payment history (94%) confirms transaction intent, indicating a transient gateway drop. Recommending technical retry.",
+    "recommended_intervention": "technical_retry",
+    "recoverability": "high",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0037",
+    "event_id": "EVT-0037",
+    "root_cause": "insufficient_funds",
+    "confidence": 0.82,
+    "reasoning": "The transaction failed with an 'customer_cashflow_issue' error. Since the customer (retail) has a strong history of payment success (94%) and only 1 previous recovery attempts, this is diagnosed as a transient insufficient funds issue. A delayed retry is recommended during standard billing hours.",
+    "recommended_intervention": "payment_plan_offer",
+    "recoverability": "high",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0038",
+    "event_id": "EVT-0038",
+    "root_cause": "genuine_non_payment_intent",
+    "confidence": 0.55,
+    "reasoning": "The invoice has remained unpaid for 18 days with decline code 'customer_dispute'. With previous recovery attempts (0) yielding no response, this is diagnosed as genuine non-payment intent, requiring collections escalation.",
+    "recommended_intervention": "invoice_reminder",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0039",
+    "event_id": "EVT-0039",
+    "root_cause": "technical_failure",
+    "confidence": 0.8,
+    "reasoning": "The transaction was interrupted by a network or authentication 'timeout'. The customer's strong payment history (59%) confirms transaction intent, indicating a transient gateway drop. Recommending technical retry.",
+    "recommended_intervention": "technical_retry",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0040",
+    "event_id": "EVT-0040",
+    "root_cause": "expired_or_invalid_payment_method",
+    "confidence": 0.79,
+    "reasoning": "The payment channel 'netbanking' declined due to 'card_expired'. This indicates the card details on file are expired or incorrect. Since this affects recurring billing for segment 'retail', we recommend prompting the customer to update their billing credentials.",
+    "recommended_intervention": "payment_method_update",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0041",
+    "event_id": "EVT-0041",
+    "root_cause": "expired_or_invalid_payment_method",
+    "confidence": 0.82,
+    "reasoning": "The payment channel 'card' declined due to 'card_expired'. This indicates the card details on file are expired or incorrect. Since this affects recurring billing for segment 'retail', we recommend prompting the customer to update their billing credentials.",
+    "recommended_intervention": "payment_method_update",
+    "recoverability": "high",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0042",
+    "event_id": "EVT-0042",
+    "root_cause": "insufficient_funds",
+    "confidence": 0.7,
+    "reasoning": "The transaction failed with an 'customer_cashflow_issue' error. Since the customer (enterprise) has a strong history of payment success (59%) and only 0 previous recovery attempts, this is diagnosed as a transient insufficient funds issue. A delayed retry is recommended during standard billing hours.",
+    "recommended_intervention": "payment_plan_offer",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0043",
+    "event_id": "EVT-0043",
+    "root_cause": "technical_failure",
+    "confidence": 0.86,
+    "reasoning": "The transaction was interrupted by a network or authentication 'timeout'. The customer's strong payment history (94%) confirms transaction intent, indicating a transient gateway drop. Recommending technical retry.",
+    "recommended_intervention": "technical_retry",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0044",
+    "event_id": "EVT-0044",
+    "root_cause": "technical_failure",
+    "confidence": 0.62,
+    "reasoning": "The transaction was interrupted by a network or authentication 'network_error'. The customer's strong payment history (28%) confirms transaction intent, indicating a transient gateway drop. Recommending technical retry.",
+    "recommended_intervention": "technical_retry",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0045",
+    "event_id": "EVT-0045",
+    "root_cause": "insufficient_funds",
+    "confidence": 0.92,
+    "reasoning": "The transaction failed with an 'insufficient_funds' error. Since the customer (SMB) has a strong history of payment success (91%) and only 1 previous recovery attempts, this is diagnosed as a transient insufficient funds issue. A delayed retry is recommended during standard billing hours.",
+    "recommended_intervention": "delayed_retry",
+    "recoverability": "high",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0046",
+    "event_id": "EVT-0046",
+    "root_cause": "technical_failure",
+    "confidence": 0.8,
+    "reasoning": "The transaction was interrupted by a network or authentication 'timeout'. The customer's strong payment history (59%) confirms transaction intent, indicating a transient gateway drop. Recommending technical retry.",
+    "recommended_intervention": "technical_retry",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0047",
+    "event_id": "EVT-0047",
+    "root_cause": "technical_failure",
+    "confidence": 0.65,
+    "reasoning": "The transaction was interrupted by a network or authentication 'authentication_failed'. The customer's strong payment history (28%) confirms transaction intent, indicating a transient gateway drop. Recommending technical retry.",
+    "recommended_intervention": "technical_retry",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0048",
+    "event_id": "EVT-0048",
+    "root_cause": "insufficient_funds",
+    "confidence": 0.95,
+    "reasoning": "The transaction failed with an 'insufficient_funds' error. Since the customer (retail) has a strong history of payment success (95%) and only 0 previous recovery attempts, this is diagnosed as a transient insufficient funds issue. A delayed retry is recommended during standard billing hours.",
+    "recommended_intervention": "delayed_retry",
+    "recoverability": "high",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0049",
+    "event_id": "EVT-0049",
+    "root_cause": "expired_or_invalid_payment_method",
+    "confidence": 0.85,
+    "reasoning": "The payment channel 'international_card' declined due to 'card_expired'. This indicates the card details on file are expired or incorrect. Since this affects recurring billing for segment 'SMB', we recommend prompting the customer to update their billing credentials.",
+    "recommended_intervention": "payment_method_update",
+    "recoverability": "high",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0050",
+    "event_id": "EVT-0050",
+    "root_cause": "genuine_non_payment_intent",
+    "confidence": 0.55,
+    "reasoning": "The invoice has remained unpaid for 12 days with decline code 'customer_dispute'. With previous recovery attempts (0) yielding no response, this is diagnosed as genuine non-payment intent, requiring collections escalation.",
+    "recommended_intervention": "invoice_reminder",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0051",
+    "event_id": "EVT-0051",
+    "root_cause": "checkout_friction",
+    "confidence": 0.6,
+    "reasoning": "The customer abandoned the checkout during the 'review' stage due to 'checkout_friction'. This suggests friction in the payment flow. A soft nudge or offering alternative checkouts should reduce abandonment.",
+    "recommended_intervention": "friction_reducing_nudge",
+    "recoverability": "high",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0052",
+    "event_id": "EVT-0052",
+    "root_cause": "checkout_friction",
+    "confidence": 0.6,
+    "reasoning": "The customer abandoned the checkout during the 'review' stage due to 'checkout_friction'. This suggests friction in the payment flow. A soft nudge or offering alternative checkouts should reduce abandonment.",
+    "recommended_intervention": "friction_reducing_nudge",
+    "recoverability": "high",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0053",
+    "event_id": "EVT-0053",
+    "root_cause": "insufficient_funds",
+    "confidence": 0.95,
+    "reasoning": "The transaction failed with an 'insufficient_funds' error. Since the customer (enterprise) has a strong history of payment success (91%) and only 0 previous recovery attempts, this is diagnosed as a transient insufficient funds issue. A delayed retry is recommended during standard billing hours.",
+    "recommended_intervention": "delayed_retry",
+    "recoverability": "high",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0054",
+    "event_id": "EVT-0054",
+    "root_cause": "insufficient_funds",
+    "confidence": 0.92,
+    "reasoning": "The transaction failed with an 'insufficient_funds' error. Since the customer (retail) has a strong history of payment success (88%) and only 1 previous recovery attempts, this is diagnosed as a transient insufficient funds issue. A delayed retry is recommended during standard billing hours.",
+    "recommended_intervention": "delayed_retry",
+    "recoverability": "high",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0055",
+    "event_id": "EVT-0055",
+    "root_cause": "genuine_non_payment_intent",
+    "confidence": 0.62,
+    "reasoning": "The invoice has remained unpaid for 75 days with decline code 'invoice_unpaid'. With previous recovery attempts (1) yielding no response, this is diagnosed as genuine non-payment intent, requiring collections escalation.",
+    "recommended_intervention": "human_collections_review",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0056",
+    "event_id": "EVT-0056",
+    "root_cause": "insufficient_funds",
+    "confidence": 0.77,
+    "reasoning": "The transaction failed with an 'insufficient_funds' error. Since the customer (enterprise) has a strong history of payment success (54%) and only 1 previous recovery attempts, this is diagnosed as a transient insufficient funds issue. A delayed retry is recommended during standard billing hours.",
+    "recommended_intervention": "delayed_retry",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0057",
+    "event_id": "EVT-0057",
+    "root_cause": "insufficient_funds",
+    "confidence": 0.84,
+    "reasoning": "The transaction failed with an 'insufficient_funds' error. Since the customer (retail) has a strong history of payment success (28%) and only 2 previous recovery attempts, this is diagnosed as a transient insufficient funds issue. A delayed retry is recommended during standard billing hours.",
+    "recommended_intervention": "delayed_retry",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0058",
+    "event_id": "EVT-0058",
+    "root_cause": "expired_or_invalid_payment_method",
+    "confidence": 0.82,
+    "reasoning": "The payment channel 'bank_transfer' declined due to 'card_expired'. This indicates the card details on file are expired or incorrect. Since this affects recurring billing for segment 'retail', we recommend prompting the customer to update their billing credentials.",
+    "recommended_intervention": "payment_method_update",
+    "recoverability": "high",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0059",
+    "event_id": "EVT-0059",
+    "root_cause": "checkout_friction",
+    "confidence": 0.48,
+    "reasoning": "The customer abandoned the checkout during the 'authentication' stage due to 'customer_abandoned'. This suggests friction in the payment flow. A soft nudge or offering alternative checkouts should reduce abandonment.",
+    "recommended_intervention": "friction_reducing_nudge",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0060",
+    "event_id": "EVT-0060",
+    "root_cause": "genuine_non_payment_intent",
+    "confidence": 0.75,
+    "reasoning": "The customer abandoned the payment flow with 'customer_abandoned'. Due to repeated attempts (0) and a moderate history success rate (30%), this points to a genuine lack of transaction intent.",
+    "recommended_intervention": "invoice_reminder",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0061",
+    "event_id": "EVT-0061",
+    "root_cause": "expired_or_invalid_payment_method",
+    "confidence": 0.85,
+    "reasoning": "The payment channel 'bank_transfer' declined due to 'card_expired'. This indicates the card details on file are expired or incorrect. Since this affects recurring billing for segment 'retail', we recommend prompting the customer to update their billing credentials.",
+    "recommended_intervention": "payment_method_update",
+    "recoverability": "high",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0062",
+    "event_id": "EVT-0062",
+    "root_cause": "insufficient_funds",
+    "confidence": 0.8,
+    "reasoning": "The transaction failed with an 'insufficient_funds' error. Since the customer (retail) has a strong history of payment success (65%) and only 0 previous recovery attempts, this is diagnosed as a transient insufficient funds issue. A delayed retry is recommended during standard billing hours.",
+    "recommended_intervention": "delayed_retry",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0063",
+    "event_id": "EVT-0063",
+    "root_cause": "genuine_non_payment_intent",
+    "confidence": 0.61,
+    "reasoning": "The invoice has remained unpaid for 5 days with decline code 'invoice_unpaid'. With previous recovery attempts (3) yielding no response, this is diagnosed as genuine non-payment intent, requiring collections escalation.",
+    "recommended_intervention": "invoice_reminder",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0064",
+    "event_id": "EVT-0064",
+    "root_cause": "genuine_non_payment_intent",
+    "confidence": 0.45,
+    "reasoning": "The customer abandoned the payment flow with 'issuer_declined'. Due to repeated attempts (0) and a moderate history success rate (22%), this points to a genuine lack of transaction intent.",
+    "recommended_intervention": "invoice_reminder",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0065",
+    "event_id": "EVT-0065",
+    "root_cause": "cross_border_issuer_risk",
+    "confidence": 0.7,
+    "reasoning": "The cross-border transaction failed with 'risk_flagged' from an international issuer. The customer is based in United States (billing currency: USD). This denotes cross-border issuer friction. Requesting alternative payment method.",
+    "recommended_intervention": "alternative_payment_method",
+    "recoverability": "high",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0066",
+    "event_id": "EVT-0066",
+    "root_cause": "insufficient_funds",
+    "confidence": 0.8,
+    "reasoning": "The transaction failed with an 'insufficient_funds' error. Since the customer (enterprise) has a strong history of payment success (56%) and only 0 previous recovery attempts, this is diagnosed as a transient insufficient funds issue. A delayed retry is recommended during standard billing hours.",
+    "recommended_intervention": "delayed_retry",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0067",
+    "event_id": "EVT-0067",
+    "root_cause": "expired_or_invalid_payment_method",
+    "confidence": 0.79,
+    "reasoning": "The payment channel 'netbanking' declined due to 'card_expired'. This indicates the card details on file are expired or incorrect. Since this affects recurring billing for segment 'retail', we recommend prompting the customer to update their billing credentials.",
+    "recommended_intervention": "payment_method_update",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0068",
+    "event_id": "EVT-0068",
+    "root_cause": "technical_failure",
+    "confidence": 0.8,
+    "reasoning": "The transaction was interrupted by a network or authentication 'authentication_failed'. The customer's strong payment history (65%) confirms transaction intent, indicating a transient gateway drop. Recommending technical retry.",
+    "recommended_intervention": "technical_retry",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0069",
+    "event_id": "EVT-0069",
+    "root_cause": "genuine_non_payment_intent",
+    "confidence": 0.45,
+    "reasoning": "The invoice has remained unpaid for 18 days with decline code 'invoice_unpaid'. With previous recovery attempts (1) yielding no response, this is diagnosed as genuine non-payment intent, requiring collections escalation.",
+    "recommended_intervention": "invoice_reminder",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0070",
+    "event_id": "EVT-0070",
+    "root_cause": "technical_failure",
+    "confidence": 0.8,
+    "reasoning": "The transaction was interrupted by a network or authentication 'network_error'. The customer's strong payment history (54%) confirms transaction intent, indicating a transient gateway drop. Recommending technical retry.",
+    "recommended_intervention": "technical_retry",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0071",
+    "event_id": "EVT-0071",
+    "root_cause": "insufficient_funds",
+    "confidence": 0.84,
+    "reasoning": "The transaction failed with an 'insufficient_funds' error. Since the customer (retail) has a strong history of payment success (46%) and only 2 previous recovery attempts, this is diagnosed as a transient insufficient funds issue. A delayed retry is recommended during standard billing hours.",
+    "recommended_intervention": "delayed_retry",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0072",
+    "event_id": "EVT-0072",
+    "root_cause": "checkout_friction",
+    "confidence": 0.57,
+    "reasoning": "The customer abandoned the checkout during the 'payment_method_selection' stage due to 'checkout_friction'. This suggests friction in the payment flow. A soft nudge or offering alternative checkouts should reduce abandonment.",
+    "recommended_intervention": "friction_reducing_nudge",
+    "recoverability": "high",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0073",
+    "event_id": "EVT-0073",
+    "root_cause": "insufficient_funds",
+    "confidence": 0.8,
+    "reasoning": "The transaction failed with an 'customer_cashflow_issue' error. Since the customer (retail) has a strong history of payment success (27%) and only 0 previous recovery attempts, this is diagnosed as a transient insufficient funds issue. A delayed retry is recommended during standard billing hours.",
+    "recommended_intervention": "payment_plan_offer",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0074",
+    "event_id": "EVT-0074",
+    "root_cause": "expired_or_invalid_payment_method",
+    "confidence": 0.82,
+    "reasoning": "The payment channel 'upi' declined due to 'card_expired'. This indicates the card details on file are expired or incorrect. Since this affects recurring billing for segment 'SMB', we recommend prompting the customer to update their billing credentials.",
+    "recommended_intervention": "payment_method_update",
+    "recoverability": "high",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0075",
+    "event_id": "EVT-0075",
+    "root_cause": "cross_border_issuer_risk",
+    "confidence": 0.45,
+    "reasoning": "The cross-border transaction failed with 'issuer_declined' from an international issuer. The customer is based in Malaysia (billing currency: MYR). This denotes cross-border issuer friction. Requesting alternative payment method.",
+    "recommended_intervention": "alternative_payment_method",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0076",
+    "event_id": "EVT-0076",
+    "root_cause": "genuine_non_payment_intent",
+    "confidence": 0.45,
+    "reasoning": "The customer abandoned the payment flow with 'issuer_declined'. Due to repeated attempts (4) and a moderate history success rate (78%), this points to a genuine lack of transaction intent.",
+    "recommended_intervention": "invoice_reminder",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0077",
+    "event_id": "EVT-0077",
+    "root_cause": "payment_method_mismatch",
+    "confidence": 0.69,
+    "reasoning": "A payment method conflict occurred. The customer from UAE attempted payment with 'international_card' which is unavailable internationally. Recommend updating checkout details to suggest international cards.",
+    "recommended_intervention": "payment_method_update",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0078",
+    "event_id": "EVT-0078",
+    "root_cause": "expired_or_invalid_payment_method",
+    "confidence": 0.82,
+    "reasoning": "The payment channel 'bank_transfer' declined due to 'card_expired'. This indicates the card details on file are expired or incorrect. Since this affects recurring billing for segment 'retail', we recommend prompting the customer to update their billing credentials.",
+    "recommended_intervention": "payment_method_update",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0079",
+    "event_id": "EVT-0079",
+    "root_cause": "issuer_risk_flag",
+    "confidence": 0.74,
+    "reasoning": "The domestic payment failed due to 'risk_flagged' from the card issuer. The customer has a success rate of 68%, indicating a low-risk profile historically. Recommending alternative payment method selection.",
+    "recommended_intervention": "alternative_payment_method",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0080",
+    "event_id": "EVT-0080",
+    "root_cause": "expired_or_invalid_payment_method",
+    "confidence": 0.82,
+    "reasoning": "The payment channel 'bank_transfer' declined due to 'card_expired'. This indicates the card details on file are expired or incorrect. Since this affects recurring billing for segment 'retail', we recommend prompting the customer to update their billing credentials.",
+    "recommended_intervention": "payment_method_update",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0081",
+    "event_id": "EVT-0081",
+    "root_cause": "checkout_friction",
+    "confidence": 0.6,
+    "reasoning": "The customer abandoned the checkout during the 'review' stage due to 'customer_abandoned'. This suggests friction in the payment flow. A soft nudge or offering alternative checkouts should reduce abandonment.",
+    "recommended_intervention": "friction_reducing_nudge",
+    "recoverability": "high",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0082",
+    "event_id": "EVT-0082",
+    "root_cause": "checkout_friction",
+    "confidence": 0.7,
+    "reasoning": "The customer abandoned the checkout during the 'payment_details' stage due to 'payment_method_unavailable'. This suggests friction in the payment flow. A soft nudge or offering alternative checkouts should reduce abandonment.",
+    "recommended_intervention": "friction_reducing_nudge",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0083",
+    "event_id": "EVT-0083",
+    "root_cause": "insufficient_funds",
+    "confidence": 0.66,
+    "reasoning": "The transaction failed with an 'customer_cashflow_issue' error. Since the customer (SMB) has a strong history of payment success (88%) and only 3 previous recovery attempts, this is diagnosed as a transient insufficient funds issue. A delayed retry is recommended during standard billing hours.",
+    "recommended_intervention": "payment_plan_offer",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0084",
+    "event_id": "EVT-0084",
+    "root_cause": "expired_or_invalid_payment_method",
+    "confidence": 0.76,
+    "reasoning": "The payment channel 'international_card' declined due to 'card_expired'. This indicates the card details on file are expired or incorrect. Since this affects recurring billing for segment 'retail', we recommend prompting the customer to update their billing credentials.",
+    "recommended_intervention": "payment_method_update",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0085",
+    "event_id": "EVT-0085",
+    "root_cause": "insufficient_funds",
+    "confidence": 0.95,
+    "reasoning": "The transaction failed with an 'insufficient_funds' error. Since the customer (SMB) has a strong history of payment success (91%) and only 0 previous recovery attempts, this is diagnosed as a transient insufficient funds issue. A delayed retry is recommended during standard billing hours.",
+    "recommended_intervention": "delayed_retry",
+    "recoverability": "high",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0086",
+    "event_id": "EVT-0086",
+    "root_cause": "technical_failure",
+    "confidence": 0.8,
+    "reasoning": "The transaction was interrupted by a network or authentication 'network_error'. The customer's strong payment history (50%) confirms transaction intent, indicating a transient gateway drop. Recommending technical retry.",
+    "recommended_intervention": "technical_retry",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0087",
+    "event_id": "EVT-0087",
+    "root_cause": "genuine_non_payment_intent",
+    "confidence": 0.6,
+    "reasoning": "The customer abandoned the payment flow with 'price_shock'. Due to repeated attempts (0) and a moderate history success rate (50%), this points to a genuine lack of transaction intent.",
+    "recommended_intervention": "payment_plan_offer",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0088",
+    "event_id": "EVT-0088",
+    "root_cause": "insufficient_funds",
+    "confidence": 0.92,
+    "reasoning": "The transaction failed with an 'insufficient_funds' error. Since the customer (SMB) has a strong history of payment success (91%) and only 1 previous recovery attempts, this is diagnosed as a transient insufficient funds issue. A delayed retry is recommended during standard billing hours.",
+    "recommended_intervention": "delayed_retry",
+    "recoverability": "high",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0089",
+    "event_id": "EVT-0089",
+    "root_cause": "checkout_friction",
+    "confidence": 0.7,
+    "reasoning": "The customer abandoned the checkout during the 'authentication' stage due to 'payment_method_unavailable'. This suggests friction in the payment flow. A soft nudge or offering alternative checkouts should reduce abandonment.",
+    "recommended_intervention": "friction_reducing_nudge",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0090",
+    "event_id": "EVT-0090",
+    "root_cause": "expired_or_invalid_payment_method",
+    "confidence": 0.85,
+    "reasoning": "The payment channel 'upi' declined due to 'card_expired'. This indicates the card details on file are expired or incorrect. Since this affects recurring billing for segment 'SMB', we recommend prompting the customer to update their billing credentials.",
+    "recommended_intervention": "payment_method_update",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0091",
+    "event_id": "EVT-0091",
+    "root_cause": "insufficient_funds",
+    "confidence": 0.77,
+    "reasoning": "The transaction failed with an 'insufficient_funds' error. Since the customer (retail) has a strong history of payment success (68%) and only 1 previous recovery attempts, this is diagnosed as a transient insufficient funds issue. A delayed retry is recommended during standard billing hours.",
+    "recommended_intervention": "delayed_retry",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0092",
+    "event_id": "EVT-0092",
+    "root_cause": "genuine_non_payment_intent",
+    "confidence": 0.65,
+    "reasoning": "The invoice has remained unpaid for 18 days with decline code 'invoice_unpaid'. With previous recovery attempts (0) yielding no response, this is diagnosed as genuine non-payment intent, requiring collections escalation.",
+    "recommended_intervention": "invoice_reminder",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0093",
+    "event_id": "EVT-0093",
+    "root_cause": "genuine_non_payment_intent",
+    "confidence": 0.86,
+    "reasoning": "The invoice has remained unpaid for 75 days with decline code 'invoice_unpaid'. With previous recovery attempts (4) yielding no response, this is diagnosed as genuine non-payment intent, requiring collections escalation.",
+    "recommended_intervention": "human_collections_review",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0094",
+    "event_id": "EVT-0094",
+    "root_cause": "genuine_non_payment_intent",
+    "confidence": 0.8,
+    "reasoning": "The invoice has remained unpaid for 12 days with decline code 'customer_dispute'. With previous recovery attempts (0) yielding no response, this is diagnosed as genuine non-payment intent, requiring collections escalation.",
+    "recommended_intervention": "invoice_reminder",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0095",
+    "event_id": "EVT-0095",
+    "root_cause": "technical_failure",
+    "confidence": 0.77,
+    "reasoning": "The transaction was interrupted by a network or authentication 'network_error'. The customer's strong payment history (78%) confirms transaction intent, indicating a transient gateway drop. Recommending technical retry.",
+    "recommended_intervention": "technical_retry",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0096",
+    "event_id": "EVT-0096",
+    "root_cause": "expired_or_invalid_payment_method",
+    "confidence": 0.85,
+    "reasoning": "The payment channel 'bank_transfer' declined due to 'card_expired'. This indicates the card details on file are expired or incorrect. Since this affects recurring billing for segment 'retail', we recommend prompting the customer to update their billing credentials.",
+    "recommended_intervention": "payment_method_update",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0097",
+    "event_id": "EVT-0097",
+    "root_cause": "insufficient_funds",
+    "confidence": 0.8,
+    "reasoning": "The transaction failed with an 'insufficient_funds' error. Since the customer (retail) has a strong history of payment success (65%) and only 0 previous recovery attempts, this is diagnosed as a transient insufficient funds issue. A delayed retry is recommended during standard billing hours.",
+    "recommended_intervention": "delayed_retry",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0098",
+    "event_id": "EVT-0098",
+    "root_cause": "insufficient_funds",
+    "confidence": 0.64,
+    "reasoning": "The transaction failed with an 'customer_cashflow_issue' error. Since the customer (retail) has a strong history of payment success (60%) and only 2 previous recovery attempts, this is diagnosed as a transient insufficient funds issue. A delayed retry is recommended during standard billing hours.",
+    "recommended_intervention": "payment_plan_offer",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0099",
+    "event_id": "EVT-0099",
+    "root_cause": "insufficient_funds",
+    "confidence": 0.9,
+    "reasoning": "The transaction failed with an 'insufficient_funds' error. Since the customer (retail) has a strong history of payment success (23%) and only 0 previous recovery attempts, this is diagnosed as a transient insufficient funds issue. A delayed retry is recommended during standard billing hours.",
+    "recommended_intervention": "delayed_retry",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0100",
+    "event_id": "EVT-0100",
+    "root_cause": "genuine_non_payment_intent",
+    "confidence": 0.72,
+    "reasoning": "The customer abandoned the payment flow with 'checkout_friction'. Due to repeated attempts (1) and a moderate history success rate (30%), this points to a genuine lack of transaction intent.",
+    "recommended_intervention": "invoice_reminder",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0101",
+    "event_id": "EVT-0101",
+    "root_cause": "insufficient_funds",
+    "confidence": 0.7,
+    "reasoning": "The transaction failed with an 'customer_cashflow_issue' error. Since the customer (retail) has a strong history of payment success (65%) and only 0 previous recovery attempts, this is diagnosed as a transient insufficient funds issue. A delayed retry is recommended during standard billing hours.",
+    "recommended_intervention": "payment_plan_offer",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0102",
+    "event_id": "EVT-0102",
+    "root_cause": "checkout_friction",
+    "confidence": 0.61,
+    "reasoning": "The customer abandoned the checkout during the 'review' stage due to 'payment_method_unavailable'. This suggests friction in the payment flow. A soft nudge or offering alternative checkouts should reduce abandonment.",
+    "recommended_intervention": "friction_reducing_nudge",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0103",
+    "event_id": "EVT-0103",
+    "root_cause": "insufficient_funds",
+    "confidence": 0.8,
+    "reasoning": "The transaction failed with an 'insufficient_funds' error. Since the customer (retail) has a strong history of payment success (65%) and only 0 previous recovery attempts, this is diagnosed as a transient insufficient funds issue. A delayed retry is recommended during standard billing hours.",
+    "recommended_intervention": "delayed_retry",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0104",
+    "event_id": "EVT-0104",
+    "root_cause": "cross_border_issuer_risk",
+    "confidence": 0.45,
+    "reasoning": "The cross-border transaction failed with 'issuer_declined' from an international issuer. The customer is based in UAE (billing currency: AED). This denotes cross-border issuer friction. Requesting alternative payment method.",
+    "recommended_intervention": "alternative_payment_method",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0105",
+    "event_id": "EVT-0105",
+    "root_cause": "expired_or_invalid_payment_method",
+    "confidence": 0.85,
+    "reasoning": "The payment channel 'upi' declined due to 'card_expired'. This indicates the card details on file are expired or incorrect. Since this affects recurring billing for segment 'retail', we recommend prompting the customer to update their billing credentials.",
+    "recommended_intervention": "payment_method_update",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0106",
+    "event_id": "EVT-0106",
+    "root_cause": "checkout_friction",
+    "confidence": 0.45,
+    "reasoning": "The customer abandoned the checkout during the 'payment_details' stage due to 'checkout_friction'. This suggests friction in the payment flow. A soft nudge or offering alternative checkouts should reduce abandonment.",
+    "recommended_intervention": "friction_reducing_nudge",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0107",
+    "event_id": "EVT-0107",
+    "root_cause": "insufficient_funds",
+    "confidence": 0.9,
+    "reasoning": "The transaction failed with an 'insufficient_funds' error. Since the customer (SMB) has a strong history of payment success (39%) and only 0 previous recovery attempts, this is diagnosed as a transient insufficient funds issue. A delayed retry is recommended during standard billing hours.",
+    "recommended_intervention": "delayed_retry",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0108",
+    "event_id": "EVT-0108",
+    "root_cause": "checkout_friction",
+    "confidence": 0.6,
+    "reasoning": "The customer abandoned the checkout during the 'payment_details' stage due to 'checkout_friction'. This suggests friction in the payment flow. A soft nudge or offering alternative checkouts should reduce abandonment.",
+    "recommended_intervention": "friction_reducing_nudge",
+    "recoverability": "high",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0109",
+    "event_id": "EVT-0109",
+    "root_cause": "checkout_friction",
+    "confidence": 0.6,
+    "reasoning": "The customer abandoned the checkout during the 'authentication' stage due to 'customer_abandoned'. This suggests friction in the payment flow. A soft nudge or offering alternative checkouts should reduce abandonment.",
+    "recommended_intervention": "friction_reducing_nudge",
+    "recoverability": "high",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0110",
+    "event_id": "EVT-0110",
+    "root_cause": "payment_method_mismatch",
+    "confidence": 0.72,
+    "reasoning": "A payment method conflict occurred. The customer from United States attempted payment with 'international_card' which is unavailable internationally. Recommend updating checkout details to suggest international cards.",
+    "recommended_intervention": "payment_method_update",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0111",
+    "event_id": "EVT-0111",
+    "root_cause": "expired_or_invalid_payment_method",
+    "confidence": 0.76,
+    "reasoning": "The payment channel 'international_card' declined due to 'card_expired'. This indicates the card details on file are expired or incorrect. Since this affects recurring billing for segment 'retail', we recommend prompting the customer to update their billing credentials.",
+    "recommended_intervention": "payment_method_update",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0112",
+    "event_id": "EVT-0112",
+    "root_cause": "technical_failure",
+    "confidence": 0.77,
+    "reasoning": "The transaction was interrupted by a network or authentication 'authentication_failed'. The customer's strong payment history (60%) confirms transaction intent, indicating a transient gateway drop. Recommending technical retry.",
+    "recommended_intervention": "technical_retry",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0113",
+    "event_id": "EVT-0113",
+    "root_cause": "genuine_non_payment_intent",
+    "confidence": 0.45,
+    "reasoning": "The customer abandoned the payment flow with 'price_shock'. Due to repeated attempts (0) and a moderate history success rate (92%), this points to a genuine lack of transaction intent.",
+    "recommended_intervention": "payment_plan_offer",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0114",
+    "event_id": "EVT-0114",
+    "root_cause": "checkout_friction",
+    "confidence": 0.48,
+    "reasoning": "The customer abandoned the checkout during the 'payment_method_selection' stage due to 'checkout_friction'. This suggests friction in the payment flow. A soft nudge or offering alternative checkouts should reduce abandonment.",
+    "recommended_intervention": "friction_reducing_nudge",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0115",
+    "event_id": "EVT-0115",
+    "root_cause": "technical_failure",
+    "confidence": 0.8,
+    "reasoning": "The transaction was interrupted by a network or authentication 'network_error'. The customer's strong payment history (54%) confirms transaction intent, indicating a transient gateway drop. Recommending technical retry.",
+    "recommended_intervention": "technical_retry",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0116",
+    "event_id": "EVT-0116",
+    "root_cause": "expired_or_invalid_payment_method",
+    "confidence": 0.85,
+    "reasoning": "The payment channel 'wallet' declined due to 'card_invalid'. This indicates the card details on file are expired or incorrect. Since this affects recurring billing for segment 'retail', we recommend prompting the customer to update their billing credentials.",
+    "recommended_intervention": "payment_method_update",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0117",
+    "event_id": "EVT-0117",
+    "root_cause": "genuine_non_payment_intent",
+    "confidence": 0.95,
+    "reasoning": "The invoice has remained unpaid for 12 days with decline code 'customer_dispute'. With previous recovery attempts (1) yielding no response, this is diagnosed as genuine non-payment intent, requiring collections escalation.",
+    "recommended_intervention": "invoice_reminder",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0118",
+    "event_id": "EVT-0118",
+    "root_cause": "expired_or_invalid_payment_method",
+    "confidence": 0.73,
+    "reasoning": "The payment channel 'international_card' declined due to 'card_expired'. This indicates the card details on file are expired or incorrect. Since this affects recurring billing for segment 'retail', we recommend prompting the customer to update their billing credentials.",
+    "recommended_intervention": "payment_method_update",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0119",
+    "event_id": "EVT-0119",
+    "root_cause": "genuine_non_payment_intent",
+    "confidence": 0.69,
+    "reasoning": "The customer abandoned the payment flow with 'checkout_friction'. Due to repeated attempts (2) and a moderate history success rate (30%), this points to a genuine lack of transaction intent.",
+    "recommended_intervention": "invoice_reminder",
+    "recoverability": "low",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  },
+  {
+    "diagnosis_id": "DGN-0120",
+    "event_id": "EVT-0120",
+    "root_cause": "issuer_risk_flag",
+    "confidence": 0.77,
+    "reasoning": "The domestic payment failed due to 'risk_flagged' from the card issuer. The customer has a success rate of 65%, indicating a low-risk profile historically. Recommending alternative payment method selection.",
+    "recommended_intervention": "alternative_payment_method",
+    "recoverability": "medium",
+    "diagnosed_at": "2026-08-26T22:00:00Z"
+  }
+]

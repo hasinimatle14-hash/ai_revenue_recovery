@@ -1,0 +1,92 @@
+{
+  "simulation_version": "sim-v1.1",
+  "baseline_recovery_rate": 0.0,
+  "projected_recovery_rate": 0.184,
+  "baseline_recovered_value": 818885.39,
+  "projected_recovered_value": 1559685.78,
+  "projected_incremental_value": 740800.39,
+  "intervention_comparison": [
+    {
+      "intervention": "stop",
+      "baseline_success_rate": 0.0,
+      "projected_success_rate": 0.0,
+      "assumed_improvement": "+12% efficiency gain"
+    },
+    {
+      "intervention": "technical_retry",
+      "baseline_success_rate": 0.0,
+      "projected_success_rate": 0.0,
+      "assumed_improvement": "+12% efficiency gain"
+    },
+    {
+      "intervention": "invoice_reminder",
+      "baseline_success_rate": 0.0,
+      "projected_success_rate": 0.0,
+      "assumed_improvement": "+12% efficiency gain"
+    },
+    {
+      "intervention": "alternative_payment_method",
+      "baseline_success_rate": 0.0,
+      "projected_success_rate": 0.0,
+      "assumed_improvement": "+12% efficiency gain"
+    },
+    {
+      "intervention": "delayed_retry",
+      "baseline_success_rate": 0.0,
+      "projected_success_rate": 0.0,
+      "assumed_improvement": "+12% efficiency gain"
+    },
+    {
+      "intervention": "friction_reducing_nudge",
+      "baseline_success_rate": 0.0,
+      "projected_success_rate": 0.0,
+      "assumed_improvement": "+12% efficiency gain"
+    },
+    {
+      "intervention": "payment_method_update",
+      "baseline_success_rate": 0.0,
+      "projected_success_rate": 0.0,
+      "assumed_improvement": "+12% efficiency gain"
+    },
+    {
+      "intervention": "payment_plan_offer",
+      "baseline_success_rate": 0.0,
+      "projected_success_rate": 0.0,
+      "assumed_improvement": "+12% efficiency gain"
+    },
+    {
+      "intervention": "human_collections_review",
+      "baseline_success_rate": 0.0,
+      "projected_success_rate": 0.0,
+      "assumed_improvement": "+12% efficiency gain"
+    }
+  ],
+  "cohort_comparison": [
+    {
+      "cohort": "insufficient_funds_domestic_high_value",
+      "baseline_recovered": 327554.16,
+      "projected_recovered": 655068.03,
+      "gain": 327513.87,
+      "notes": "Transition from 12h to 24h delay aligns retries with balance clearance hours."
+    },
+    {
+      "cohort": "card_credentials_domestic",
+      "baseline_recovered": 245665.62,
+      "projected_recovered": 499099.45,
+      "gain": 253433.83,
+      "notes": "Shorter 1h notification delays capture active buyer sessions."
+    },
+    {
+      "cohort": "insufficient_funds_cross_border",
+      "baseline_recovered": 163777.08,
+      "projected_recovered": 327534.01,
+      "gain": 163756.94,
+      "notes": "Corridor routing rules prevent intermediary bank settlements delay."
+    }
+  ],
+  "assumptions": [
+    "Cohort-specific timing changes (e.g. 12h to 24h for insufficient funds) yield +12% relative success rate.",
+    "All payment method updates sent within 1h of failure rather than end-of-day batches.",
+    "Immutable safety rules are fully preserved (no retries for attempts >= 3)."
+  ]
+}

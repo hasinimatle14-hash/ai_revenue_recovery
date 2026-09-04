@@ -1,0 +1,11 @@
+{
+  "learning_version": "learning-v1.1",
+  "events_analyzed": 120,
+  "strategies_generated": 4,
+  "cohorts_analyzed": 4,
+  "best_intervention": "stop",
+  "best_performing_cohort": "general_payment_failures",
+  "projected_simulated_recovery": 1559685.78,
+  "confidence": 0.0,
+  "timestamp": "2026-08-31T12:00:00Z"
+}

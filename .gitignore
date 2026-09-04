@@ -1,0 +1,30 @@
+# Python Ignore
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+venv/
+ENV/
+env/
+*.env
+
+# Node/React Ignore
+node_modules/
+dist/
+dist-ssr/
+*.local
+.eslintcache
+.DS_Store
+
+# IDEs and OS
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+Thumbs.db
+
+data/evaluation_ground_truth.json

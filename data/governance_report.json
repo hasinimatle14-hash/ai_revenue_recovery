@@ -1,0 +1,49 @@
+{
+  "governance_version": "gov-v1.0",
+  "overall_status": "compliant",
+  "policy_compliance_percentage": 100.0,
+  "total_checks_evaluated": 6,
+  "passed_checks": 6,
+  "warning_checks": 0,
+  "failed_checks": 0,
+  "safety_violations": [],
+  "checks_summary": [
+    {
+      "check_id": "CHK-0001",
+      "name": "Attempt Limit Protection (Rule A)",
+      "status": "passed",
+      "description": "Verifies transactions with >= 3 previous attempts never trigger automated retries."
+    },
+    {
+      "check_id": "CHK-0002",
+      "name": "Stop Decision Preservation (Rule E)",
+      "status": "passed",
+      "description": "Verifies stop decisions cannot be overridden to trigger recovery retries."
+    },
+    {
+      "check_id": "CHK-0003",
+      "name": "Ground-Truth Security Isolation",
+      "status": "passed",
+      "description": "Ensures merchant-facing modules never reference evaluation ground-truth data."
+    },
+    {
+      "check_id": "CHK-0004",
+      "name": "Simulated Financial Operations Isolation",
+      "status": "passed",
+      "description": "Confirms zero live Razorpay or bank payment API calls are executed."
+    },
+    {
+      "check_id": "CHK-0005",
+      "name": "Audit Trail Chronology & Unique Sequential IDs",
+      "status": "passed",
+      "description": "Ensures audit records maintain strict chronological order and unique sequential IDs."
+    },
+    {
+      "check_id": "CHK-0006",
+      "name": "Adaptive Strategy Safety Bounds",
+      "status": "passed",
+      "description": "Confirms adaptive learning models strictly observe attempt limits and safety policy rules."
+    }
+  ],
+  "generated_at": "2026-09-03T12:00:00Z"
+}

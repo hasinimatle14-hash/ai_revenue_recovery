@@ -1,0 +1,210 @@
+{
+  "generated_at": "2026-08-30T22:00:00Z",
+  "total_events": 120,
+  "total_revenue_at_risk": 4749347.69,
+  "eligible_events": 90,
+  "successful_recoveries": 59,
+  "failed_recoveries": 31,
+  "blocked_events": 1,
+  "stopped_events": 29,
+  "simulated_revenue_recovered": 1696224.6,
+  "recovery_rate": 0.6556,
+  "overall_event_recovery_rate": 0.4917,
+  "recovery_value_percentage": 0.3571,
+  "by_event_type": {
+    "overdue_invoice": {
+      "total_events": 25,
+      "revenue_at_risk": 1895287.02,
+      "successful_recoveries": 4,
+      "failed_recoveries": 7,
+      "simulated_revenue_recovered": 13546.37,
+      "recovery_rate": 0.3636
+    },
+    "failed_payment": {
+      "total_events": 35,
+      "revenue_at_risk": 915332.9,
+      "successful_recoveries": 21,
+      "failed_recoveries": 8,
+      "simulated_revenue_recovered": 782041.65,
+      "recovery_rate": 0.7241
+    },
+    "failed_subscription": {
+      "total_events": 30,
+      "revenue_at_risk": 639136.39,
+      "successful_recoveries": 17,
+      "failed_recoveries": 6,
+      "simulated_revenue_recovered": 333293.14,
+      "recovery_rate": 0.7391
+    },
+    "abandoned_checkout": {
+      "total_events": 30,
+      "revenue_at_risk": 1299591.38,
+      "successful_recoveries": 17,
+      "failed_recoveries": 10,
+      "simulated_revenue_recovered": 567343.44,
+      "recovery_rate": 0.6296
+    }
+  },
+  "by_root_cause": {
+    "genuine_non_payment_intent": {
+      "root_cause_count": 29,
+      "revenue_at_risk": 1855738.85,
+      "successful_recoveries": 4,
+      "simulated_revenue_recovered": 20797.0
+    },
+    "technical_failure": {
+      "root_cause_count": 16,
+      "revenue_at_risk": 208242.89,
+      "successful_recoveries": 12,
+      "simulated_revenue_recovered": 189695.09
+    },
+    "insufficient_funds": {
+      "root_cause_count": 29,
+      "revenue_at_risk": 1253087.52,
+      "successful_recoveries": 14,
+      "simulated_revenue_recovered": 486044.15
+    },
+    "expired_or_invalid_payment_method": {
+      "root_cause_count": 19,
+      "revenue_at_risk": 168288.72,
+      "successful_recoveries": 10,
+      "simulated_revenue_recovered": 105494.38
+    },
+    "issuer_risk_flag": {
+      "root_cause_count": 3,
+      "revenue_at_risk": 121599.0,
+      "successful_recoveries": 2,
+      "simulated_revenue_recovered": 120800.0
+    },
+    "timezone_timing_issue": {
+      "root_cause_count": 2,
+      "revenue_at_risk": 7048.71,
+      "successful_recoveries": 2,
+      "simulated_revenue_recovered": 7048.71
+    },
+    "checkout_friction": {
+      "root_cause_count": 15,
+      "revenue_at_risk": 593844.41,
+      "successful_recoveries": 10,
+      "simulated_revenue_recovered": 238845.41
+    },
+    "payment_method_mismatch": {
+      "root_cause_count": 4,
+      "revenue_at_risk": 268998.85,
+      "successful_recoveries": 3,
+      "simulated_revenue_recovered": 265000.03
+    },
+    "cross_border_issuer_risk": {
+      "root_cause_count": 3,
+      "revenue_at_risk": 272498.74,
+      "successful_recoveries": 2,
+      "simulated_revenue_recovered": 262499.83
+    }
+  },
+  "by_intervention": {
+    "stop": {
+      "intervention_count": 29,
+      "success_count": 0,
+      "failure_count": 0,
+      "success_rate": 0.0,
+      "simulated_recovered_value": 0.0
+    },
+    "technical_retry": {
+      "intervention_count": 15,
+      "success_count": 12,
+      "failure_count": 3,
+      "success_rate": 0.8,
+      "simulated_recovered_value": 189695.09
+    },
+    "invoice_reminder": {
+      "intervention_count": 13,
+      "success_count": 4,
+      "failure_count": 9,
+      "success_rate": 0.3077,
+      "simulated_recovered_value": 20797.0
+    },
+    "alternative_payment_method": {
+      "intervention_count": 6,
+      "success_count": 4,
+      "failure_count": 2,
+      "success_rate": 0.6667,
+      "simulated_recovered_value": 383299.83
+    },
+    "delayed_retry": {
+      "intervention_count": 21,
+      "success_count": 14,
+      "failure_count": 7,
+      "success_rate": 0.6667,
+      "simulated_recovered_value": 487845.49
+    },
+    "friction_reducing_nudge": {
+      "intervention_count": 14,
+      "success_count": 10,
+      "failure_count": 4,
+      "success_rate": 0.7143,
+      "simulated_recovered_value": 238845.41
+    },
+    "payment_method_update": {
+      "intervention_count": 16,
+      "success_count": 13,
+      "failure_count": 3,
+      "success_rate": 0.8125,
+      "simulated_recovered_value": 370494.41
+    },
+    "payment_plan_offer": {
+      "intervention_count": 5,
+      "success_count": 2,
+      "failure_count": 3,
+      "success_rate": 0.4,
+      "simulated_recovered_value": 5247.37
+    },
+    "human_collections_review": {
+      "intervention_count": 1,
+      "success_count": 0,
+      "failure_count": 0,
+      "success_rate": 0.0,
+      "simulated_recovered_value": 0.0
+    }
+  },
+  "by_customer_segment": {
+    "retail": {
+      "event_count": 71,
+      "revenue_at_risk": 341347.61,
+      "successful_recoveries": 32,
+      "failed_recoveries": 21,
+      "recovery_rate": 0.6038
+    },
+    "SMB": {
+      "event_count": 30,
+      "revenue_at_risk": 703000.25,
+      "successful_recoveries": 19,
+      "failed_recoveries": 6,
+      "recovery_rate": 0.76
+    },
+    "enterprise": {
+      "event_count": 19,
+      "revenue_at_risk": 3704999.83,
+      "successful_recoveries": 8,
+      "failed_recoveries": 4,
+      "recovery_rate": 0.6667
+    }
+  },
+  "by_geography": {
+    "domestic": {
+      "event_count": 75,
+      "revenue_at_risk": 2492122.0,
+      "successful_recoveries": 38,
+      "failed_recoveries": 19,
+      "recovered_value": 787185.0,
+      "recovery_rate": 0.6667
+    },
+    "cross-border": {
+      "event_count": 45,
+      "revenue_at_risk": 2257225.69,
+      "successful_recoveries": 21,
+      "failed_recoveries": 12,
+      "recovered_value": 909039.6,
+      "recovery_rate": 0.6364
+    }
+  }
+}

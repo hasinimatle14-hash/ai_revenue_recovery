@@ -1,0 +1,68 @@
+[
+  {
+    "anomaly_id": "ANM-0001",
+    "type": "excessive_stops",
+    "severity": "medium",
+    "status": "acknowledged",
+    "description": "Elevated stop decisions count: 29 transactions halted by safety bounds.",
+    "affected_count": 29,
+    "affected_events": [
+      "EVT-0001",
+      "EVT-0003",
+      "EVT-0004",
+      "EVT-0006",
+      "EVT-0009",
+      "EVT-0013",
+      "EVT-0017",
+      "EVT-0020",
+      "EVT-0024",
+      "EVT-0026"
+    ],
+    "recommended_action": "Verify if attempt count limits or low recoverability scores require threshold recalibration.",
+    "detected_at": "2026-09-03T12:00:00Z"
+  },
+  {
+    "anomaly_id": "ANM-0002",
+    "type": "manual_review_concentration",
+    "severity": "medium",
+    "status": "open",
+    "description": "High pending review concentration: 14 cases queued for merchant review.",
+    "affected_count": 14,
+    "affected_events": [
+      "EVT-0005",
+      "EVT-0010",
+      "EVT-0014",
+      "EVT-0022",
+      "EVT-0034",
+      "EVT-0038",
+      "EVT-0042",
+      "EVT-0050",
+      "EVT-0060",
+      "EVT-0064"
+    ],
+    "recommended_action": "Assign merchant reviewers to process pending decision queue.",
+    "detected_at": "2026-09-03T12:00:00Z"
+  },
+  {
+    "anomaly_id": "ANM-0003",
+    "type": "amount_anomaly",
+    "severity": "low",
+    "status": "resolved",
+    "description": "High-value simulated transaction concentration: 18 events exceeding \u20b950,000.",
+    "affected_count": 18,
+    "affected_events": [
+      "EVT-0006",
+      "EVT-0007",
+      "EVT-0020",
+      "EVT-0022",
+      "EVT-0023",
+      "EVT-0030",
+      "EVT-0035",
+      "EVT-0042",
+      "EVT-0051",
+      "EVT-0053"
+    ],
+    "recommended_action": "Ensure high-value transactions receive secondary safety policy review before simulation.",
+    "detected_at": "2026-09-03T12:00:00Z"
+  }
+]

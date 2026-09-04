@@ -1,0 +1,2726 @@
+[
+  {
+    "agent_run_id": "AGT-0001",
+    "event_id": "EVT-0001",
+    "diagnosis_id": "DGN-0001",
+    "decision_id": "DEC-0001",
+    "attempt_id": "ATT-0001",
+    "recommended_action": "stop",
+    "risk_level": "low",
+    "confidence": 0.15,
+    "action_priority": 0.63,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "Safety override triggered: Automated stop decision preserved from previous recovery stages. The AI orchestrator blocks automated execution.",
+    "next_state": "stopped",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_E_EXISTING_STOP"
+      ],
+      "reason": "Automated stop decision preserved from previous recovery stages."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0002",
+    "event_id": "EVT-0002",
+    "diagnosis_id": "DGN-0002",
+    "decision_id": "DEC-0002",
+    "attempt_id": "ATT-0002",
+    "recommended_action": "proceed_with_simulation",
+    "risk_level": "low",
+    "confidence": 0.57,
+    "action_priority": 0.6,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.98%, 1 previous recovery attempts, and a high recoverability. The AI diagnosis identifies 'technical failure' and recommends 'technical retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'proceed_with_simulation' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0003",
+    "event_id": "EVT-0003",
+    "diagnosis_id": "DGN-0003",
+    "decision_id": "DEC-0003",
+    "attempt_id": "ATT-0003",
+    "recommended_action": "stop",
+    "risk_level": "low",
+    "confidence": 0.19,
+    "action_priority": 0.62,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "Safety override triggered: Automated stop decision preserved from previous recovery stages. The AI orchestrator blocks automated execution.",
+    "next_state": "stopped",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_E_EXISTING_STOP"
+      ],
+      "reason": "Automated stop decision preserved from previous recovery stages."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0004",
+    "event_id": "EVT-0004",
+    "diagnosis_id": "DGN-0004",
+    "decision_id": "DEC-0004",
+    "attempt_id": "ATT-0004",
+    "recommended_action": "stop",
+    "risk_level": "low",
+    "confidence": 0.19,
+    "action_priority": 0.67,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "Safety override triggered: Automated stop decision preserved from previous recovery stages. The AI orchestrator blocks automated execution.",
+    "next_state": "stopped",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_E_EXISTING_STOP"
+      ],
+      "reason": "Automated stop decision preserved from previous recovery stages."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0005",
+    "event_id": "EVT-0005",
+    "diagnosis_id": "DGN-0005",
+    "decision_id": "DEC-0005",
+    "attempt_id": "ATT-0005",
+    "recommended_action": "manual_review",
+    "risk_level": "high",
+    "confidence": 0.32,
+    "action_priority": 0.64,
+    "requires_human_review": true,
+    "human_review_reason": "Conflicting recovery signals detected across diagnosis and history.",
+    "reasoning": "Safety override triggered: Conflicting recovery signals detected across diagnosis and history. The AI orchestrator blocks automated execution.",
+    "next_state": "human_review_required",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_D_CONFLICTING_SIGNALS"
+      ],
+      "reason": "Conflicting recovery signals detected across diagnosis and history."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0006",
+    "event_id": "EVT-0006",
+    "diagnosis_id": "DGN-0006",
+    "decision_id": "DEC-0006",
+    "attempt_id": "ATT-0006",
+    "recommended_action": "stop",
+    "risk_level": "low",
+    "confidence": 0.15,
+    "action_priority": 0.99,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "Safety override triggered: Automated stop decision preserved from previous recovery stages. The AI orchestrator blocks automated execution.",
+    "next_state": "stopped",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_E_EXISTING_STOP"
+      ],
+      "reason": "Automated stop decision preserved from previous recovery stages."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0007",
+    "event_id": "EVT-0007",
+    "diagnosis_id": "DGN-0007",
+    "decision_id": "DEC-0007",
+    "attempt_id": "ATT-0007",
+    "recommended_action": "request_payment_method_update",
+    "risk_level": "high",
+    "confidence": 0.56,
+    "action_priority": 1.0,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.56%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'issuer risk flag' and recommends 'alternative payment method'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'request_payment_method_update' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0008",
+    "event_id": "EVT-0008",
+    "diagnosis_id": "DGN-0008",
+    "decision_id": "DEC-0008",
+    "attempt_id": "ATT-0008",
+    "recommended_action": "delay_and_retry",
+    "risk_level": "low",
+    "confidence": 0.27,
+    "action_priority": 0.6,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.5%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'timezone timing issue' and recommends 'delayed retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'delay_and_retry' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0009",
+    "event_id": "EVT-0009",
+    "diagnosis_id": "DGN-0009",
+    "decision_id": "DEC-0009",
+    "attempt_id": "ATT-0009",
+    "recommended_action": "stop",
+    "risk_level": "low",
+    "confidence": 0.38,
+    "action_priority": 0.61,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "Safety override triggered: Automated stop decision preserved from previous recovery stages. The AI orchestrator blocks automated execution.",
+    "next_state": "stopped",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_E_EXISTING_STOP"
+      ],
+      "reason": "Automated stop decision preserved from previous recovery stages."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0010",
+    "event_id": "EVT-0010",
+    "diagnosis_id": "DGN-0010",
+    "decision_id": "DEC-0010",
+    "attempt_id": "ATT-0010",
+    "recommended_action": "manual_review",
+    "risk_level": "high",
+    "confidence": 0.59,
+    "action_priority": 0.62,
+    "requires_human_review": true,
+    "human_review_reason": "Conflicting recovery signals detected across diagnosis and history.",
+    "reasoning": "Safety override triggered: Conflicting recovery signals detected across diagnosis and history. The AI orchestrator blocks automated execution.",
+    "next_state": "human_review_required",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_D_CONFLICTING_SIGNALS"
+      ],
+      "reason": "Conflicting recovery signals detected across diagnosis and history."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0011",
+    "event_id": "EVT-0011",
+    "diagnosis_id": "DGN-0011",
+    "decision_id": "DEC-0011",
+    "attempt_id": "ATT-0011",
+    "recommended_action": "delay_and_retry",
+    "risk_level": "low",
+    "confidence": 0.56,
+    "action_priority": 0.61,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.65%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'insufficient funds' and recommends 'delayed retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'delay_and_retry' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0012",
+    "event_id": "EVT-0012",
+    "diagnosis_id": "DGN-0012",
+    "decision_id": "DEC-0012",
+    "attempt_id": "ATT-0012",
+    "recommended_action": "proceed_with_simulation",
+    "risk_level": "low",
+    "confidence": 0.41,
+    "action_priority": 0.62,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.25%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'technical failure' and recommends 'technical retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'proceed_with_simulation' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0013",
+    "event_id": "EVT-0013",
+    "diagnosis_id": "DGN-0013",
+    "decision_id": "DEC-0013",
+    "attempt_id": "ATT-0013",
+    "recommended_action": "stop",
+    "risk_level": "low",
+    "confidence": 0.28,
+    "action_priority": 0.62,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "Safety override triggered: Automated stop decision preserved from previous recovery stages. The AI orchestrator blocks automated execution.",
+    "next_state": "stopped",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_E_EXISTING_STOP"
+      ],
+      "reason": "Automated stop decision preserved from previous recovery stages."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0014",
+    "event_id": "EVT-0014",
+    "diagnosis_id": "DGN-0014",
+    "decision_id": "DEC-0014",
+    "attempt_id": "ATT-0014",
+    "recommended_action": "manual_review",
+    "risk_level": "high",
+    "confidence": 0.48,
+    "action_priority": 0.6,
+    "requires_human_review": true,
+    "human_review_reason": "Conflicting recovery signals detected across diagnosis and history.",
+    "reasoning": "Safety override triggered: Conflicting recovery signals detected across diagnosis and history. The AI orchestrator blocks automated execution.",
+    "next_state": "human_review_required",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_D_CONFLICTING_SIGNALS"
+      ],
+      "reason": "Conflicting recovery signals detected across diagnosis and history."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0015",
+    "event_id": "EVT-0015",
+    "diagnosis_id": "DGN-0015",
+    "decision_id": "DEC-0015",
+    "attempt_id": "ATT-0015",
+    "recommended_action": "proceed_with_simulation",
+    "risk_level": "low",
+    "confidence": 0.39,
+    "action_priority": 0.6,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.65%, 1 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'checkout friction' and recommends 'friction reducing nudge'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'proceed_with_simulation' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0016",
+    "event_id": "EVT-0016",
+    "diagnosis_id": "DGN-0016",
+    "decision_id": "DEC-0016",
+    "attempt_id": "ATT-0016",
+    "recommended_action": "proceed_with_simulation",
+    "risk_level": "low",
+    "confidence": 0.46,
+    "action_priority": 0.61,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.61%, 1 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'technical failure' and recommends 'technical retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'proceed_with_simulation' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0017",
+    "event_id": "EVT-0017",
+    "diagnosis_id": "DGN-0017",
+    "decision_id": "DEC-0017",
+    "attempt_id": "ATT-0017",
+    "recommended_action": "stop",
+    "risk_level": "low",
+    "confidence": 0.39,
+    "action_priority": 0.7,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "Safety override triggered: Automated stop decision preserved from previous recovery stages. The AI orchestrator blocks automated execution.",
+    "next_state": "stopped",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_E_EXISTING_STOP"
+      ],
+      "reason": "Automated stop decision preserved from previous recovery stages."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0018",
+    "event_id": "EVT-0018",
+    "diagnosis_id": "DGN-0018",
+    "decision_id": "DEC-0018",
+    "attempt_id": "ATT-0018",
+    "recommended_action": "request_payment_method_update",
+    "risk_level": "medium",
+    "confidence": 0.48,
+    "action_priority": 0.73,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.88%, 0 previous recovery attempts, and a high recoverability. The AI diagnosis identifies 'payment method mismatch' and recommends 'payment method update'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'request_payment_method_update' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0019",
+    "event_id": "EVT-0019",
+    "diagnosis_id": "DGN-0019",
+    "decision_id": "DEC-0019",
+    "attempt_id": "ATT-0019",
+    "recommended_action": "delay_and_retry",
+    "risk_level": "low",
+    "confidence": 0.19,
+    "action_priority": 0.62,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.93%, 1 previous recovery attempts, and a high recoverability. The AI diagnosis identifies 'timezone timing issue' and recommends 'delayed retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'delay_and_retry' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0020",
+    "event_id": "EVT-0020",
+    "diagnosis_id": "DGN-0020",
+    "decision_id": "DEC-0020",
+    "attempt_id": "ATT-0020",
+    "recommended_action": "stop",
+    "risk_level": "low",
+    "confidence": 0.15,
+    "action_priority": 0.99,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "Safety override triggered: Automated stop decision preserved from previous recovery stages. The AI orchestrator blocks automated execution.",
+    "next_state": "stopped",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_E_EXISTING_STOP"
+      ],
+      "reason": "Automated stop decision preserved from previous recovery stages."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0021",
+    "event_id": "EVT-0021",
+    "diagnosis_id": "DGN-0021",
+    "decision_id": "DEC-0021",
+    "attempt_id": "ATT-0021",
+    "recommended_action": "request_payment_method_update",
+    "risk_level": "low",
+    "confidence": 0.55,
+    "action_priority": 0.6,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.25%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'expired or invalid payment method' and recommends 'payment method update'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'request_payment_method_update' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0022",
+    "event_id": "EVT-0022",
+    "diagnosis_id": "DGN-0022",
+    "decision_id": "DEC-0022",
+    "attempt_id": "ATT-0022",
+    "recommended_action": "manual_review",
+    "risk_level": "critical",
+    "confidence": 0.43,
+    "action_priority": 1.0,
+    "requires_human_review": true,
+    "human_review_reason": "High value transaction (INR 220,000.00) with low recoverability.",
+    "reasoning": "Safety override triggered: High value transaction (INR 220,000.00) with low recoverability. The AI orchestrator blocks automated execution.",
+    "next_state": "human_review_required",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_C_HIGH_VALUE_LOW_REC"
+      ],
+      "reason": "High value transaction (INR 220,000.00) with low recoverability."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0023",
+    "event_id": "EVT-0023",
+    "diagnosis_id": "DGN-0023",
+    "decision_id": "DEC-0023",
+    "attempt_id": "ATT-0023",
+    "recommended_action": "request_payment_method_update",
+    "risk_level": "high",
+    "confidence": 0.38,
+    "action_priority": 0.99,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.91%, 1 previous recovery attempts, and a high recoverability. The AI diagnosis identifies 'payment method mismatch' and recommends 'payment method update'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'request_payment_method_update' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0024",
+    "event_id": "EVT-0024",
+    "diagnosis_id": "DGN-0024",
+    "decision_id": "DEC-0024",
+    "attempt_id": "ATT-0024",
+    "recommended_action": "stop",
+    "risk_level": "low",
+    "confidence": 0.15,
+    "action_priority": 0.64,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "Safety override triggered: Automated stop decision preserved from previous recovery stages. The AI orchestrator blocks automated execution.",
+    "next_state": "stopped",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_E_EXISTING_STOP"
+      ],
+      "reason": "Automated stop decision preserved from previous recovery stages."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0025",
+    "event_id": "EVT-0025",
+    "diagnosis_id": "DGN-0025",
+    "decision_id": "DEC-0025",
+    "attempt_id": "ATT-0025",
+    "recommended_action": "delay_and_retry",
+    "risk_level": "high",
+    "confidence": 0.46,
+    "action_priority": 0.74,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.22%, 1 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'insufficient funds' and recommends 'payment plan offer'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'delay_and_retry' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0026",
+    "event_id": "EVT-0026",
+    "diagnosis_id": "DGN-0026",
+    "decision_id": "DEC-0026",
+    "attempt_id": "ATT-0026",
+    "recommended_action": "stop",
+    "risk_level": "low",
+    "confidence": 0.16,
+    "action_priority": 0.74,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "Safety override triggered: Automated stop decision preserved from previous recovery stages. The AI orchestrator blocks automated execution.",
+    "next_state": "stopped",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_E_EXISTING_STOP"
+      ],
+      "reason": "Automated stop decision preserved from previous recovery stages."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0027",
+    "event_id": "EVT-0027",
+    "diagnosis_id": "DGN-0027",
+    "decision_id": "DEC-0027",
+    "attempt_id": "ATT-0027",
+    "recommended_action": "delay_and_retry",
+    "risk_level": "low",
+    "confidence": 0.53,
+    "action_priority": 0.62,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.29%, 1 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'insufficient funds' and recommends 'delayed retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'delay_and_retry' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0028",
+    "event_id": "EVT-0028",
+    "diagnosis_id": "DGN-0028",
+    "decision_id": "DEC-0028",
+    "attempt_id": "ATT-0028",
+    "recommended_action": "stop",
+    "risk_level": "low",
+    "confidence": 0.15,
+    "action_priority": 0.63,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "Safety override triggered: Automated stop decision preserved from previous recovery stages. The AI orchestrator blocks automated execution.",
+    "next_state": "stopped",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_E_EXISTING_STOP"
+      ],
+      "reason": "Automated stop decision preserved from previous recovery stages."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0029",
+    "event_id": "EVT-0029",
+    "diagnosis_id": "DGN-0029",
+    "decision_id": "DEC-0029",
+    "attempt_id": "ATT-0029",
+    "recommended_action": "stop",
+    "risk_level": "low",
+    "confidence": 0.15,
+    "action_priority": 0.67,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "Safety override triggered: Automated stop decision preserved from previous recovery stages. The AI orchestrator blocks automated execution.",
+    "next_state": "stopped",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_E_EXISTING_STOP"
+      ],
+      "reason": "Automated stop decision preserved from previous recovery stages."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0030",
+    "event_id": "EVT-0030",
+    "diagnosis_id": "DGN-0030",
+    "decision_id": "DEC-0030",
+    "attempt_id": "ATT-0030",
+    "recommended_action": "delay_and_retry",
+    "risk_level": "high",
+    "confidence": 0.46,
+    "action_priority": 1.0,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.56%, 1 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'insufficient funds' and recommends 'delayed retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'delay_and_retry' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0031",
+    "event_id": "EVT-0031",
+    "diagnosis_id": "DGN-0031",
+    "decision_id": "DEC-0031",
+    "attempt_id": "ATT-0031",
+    "recommended_action": "proceed_with_simulation",
+    "risk_level": "low",
+    "confidence": 0.37,
+    "action_priority": 0.61,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.93%, 0 previous recovery attempts, and a high recoverability. The AI diagnosis identifies 'checkout friction' and recommends 'friction reducing nudge'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'proceed_with_simulation' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0032",
+    "event_id": "EVT-0032",
+    "diagnosis_id": "DGN-0032",
+    "decision_id": "DEC-0032",
+    "attempt_id": "ATT-0032",
+    "recommended_action": "proceed_with_simulation",
+    "risk_level": "low",
+    "confidence": 0.56,
+    "action_priority": 0.64,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.57%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'technical failure' and recommends 'technical retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'proceed_with_simulation' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0033",
+    "event_id": "EVT-0033",
+    "diagnosis_id": "DGN-0033",
+    "decision_id": "DEC-0033",
+    "attempt_id": "ATT-0033",
+    "recommended_action": "stop",
+    "risk_level": "low",
+    "confidence": 0.36,
+    "action_priority": 0.6,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "Safety override triggered: Automated stop decision preserved from previous recovery stages. The AI orchestrator blocks automated execution.",
+    "next_state": "stopped",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_E_EXISTING_STOP"
+      ],
+      "reason": "Automated stop decision preserved from previous recovery stages."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0034",
+    "event_id": "EVT-0034",
+    "diagnosis_id": "DGN-0034",
+    "decision_id": "DEC-0034",
+    "attempt_id": "ATT-0034",
+    "recommended_action": "manual_review",
+    "risk_level": "high",
+    "confidence": 0.22,
+    "action_priority": 0.62,
+    "requires_human_review": true,
+    "human_review_reason": "Conflicting recovery signals detected across diagnosis and history.",
+    "reasoning": "Safety override triggered: Conflicting recovery signals detected across diagnosis and history. The AI orchestrator blocks automated execution.",
+    "next_state": "human_review_required",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_D_CONFLICTING_SIGNALS"
+      ],
+      "reason": "Conflicting recovery signals detected across diagnosis and history."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0035",
+    "event_id": "EVT-0035",
+    "diagnosis_id": "DGN-0035",
+    "decision_id": "DEC-0035",
+    "attempt_id": "ATT-0035",
+    "recommended_action": "proceed_with_simulation",
+    "risk_level": "high",
+    "confidence": 0.49,
+    "action_priority": 1.0,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.56%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'checkout friction' and recommends 'friction reducing nudge'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'proceed_with_simulation' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0036",
+    "event_id": "EVT-0036",
+    "diagnosis_id": "DGN-0036",
+    "decision_id": "DEC-0036",
+    "attempt_id": "ATT-0036",
+    "recommended_action": "proceed_with_simulation",
+    "risk_level": "high",
+    "confidence": 0.67,
+    "action_priority": 0.63,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.94%, 0 previous recovery attempts, and a high recoverability. The AI diagnosis identifies 'technical failure' and recommends 'technical retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'proceed_with_simulation' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0037",
+    "event_id": "EVT-0037",
+    "diagnosis_id": "DGN-0037",
+    "decision_id": "DEC-0037",
+    "attempt_id": "ATT-0037",
+    "recommended_action": "delay_and_retry",
+    "risk_level": "low",
+    "confidence": 0.45,
+    "action_priority": 0.61,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.94%, 1 previous recovery attempts, and a high recoverability. The AI diagnosis identifies 'insufficient funds' and recommends 'payment plan offer'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'delay_and_retry' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0038",
+    "event_id": "EVT-0038",
+    "diagnosis_id": "DGN-0038",
+    "decision_id": "DEC-0038",
+    "attempt_id": "ATT-0038",
+    "recommended_action": "manual_review",
+    "risk_level": "high",
+    "confidence": 0.24,
+    "action_priority": 0.62,
+    "requires_human_review": true,
+    "human_review_reason": "Conflicting recovery signals detected across diagnosis and history.",
+    "reasoning": "Safety override triggered: Conflicting recovery signals detected across diagnosis and history. The AI orchestrator blocks automated execution.",
+    "next_state": "human_review_required",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_D_CONFLICTING_SIGNALS"
+      ],
+      "reason": "Conflicting recovery signals detected across diagnosis and history."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0039",
+    "event_id": "EVT-0039",
+    "diagnosis_id": "DGN-0039",
+    "decision_id": "DEC-0039",
+    "attempt_id": "ATT-0039",
+    "recommended_action": "proceed_with_simulation",
+    "risk_level": "high",
+    "confidence": 0.56,
+    "action_priority": 0.63,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.59%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'technical failure' and recommends 'technical retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'proceed_with_simulation' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0040",
+    "event_id": "EVT-0040",
+    "diagnosis_id": "DGN-0040",
+    "decision_id": "DEC-0040",
+    "attempt_id": "ATT-0040",
+    "recommended_action": "stop",
+    "risk_level": "low",
+    "confidence": 0.39,
+    "action_priority": 0.61,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "Safety override triggered: Automated stop decision preserved from previous recovery stages. The AI orchestrator blocks automated execution.",
+    "next_state": "stopped",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_E_EXISTING_STOP"
+      ],
+      "reason": "Automated stop decision preserved from previous recovery stages."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0041",
+    "event_id": "EVT-0041",
+    "diagnosis_id": "DGN-0041",
+    "decision_id": "DEC-0041",
+    "attempt_id": "ATT-0041",
+    "recommended_action": "request_payment_method_update",
+    "risk_level": "low",
+    "confidence": 0.5,
+    "action_priority": 0.6,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.98%, 1 previous recovery attempts, and a high recoverability. The AI diagnosis identifies 'expired or invalid payment method' and recommends 'payment method update'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'request_payment_method_update' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0042",
+    "event_id": "EVT-0042",
+    "diagnosis_id": "DGN-0042",
+    "decision_id": "DEC-0042",
+    "attempt_id": "ATT-0042",
+    "recommended_action": "manual_review",
+    "risk_level": "high",
+    "confidence": 0.49,
+    "action_priority": 1.0,
+    "requires_human_review": true,
+    "human_review_reason": "Manual recovery review requested by decision engine.",
+    "reasoning": "The transaction has a strong historical success rate of 0.59%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'insufficient funds' and recommends 'human collections review'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'manual_review' simulation.",
+    "next_state": "human_review_required",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0043",
+    "event_id": "EVT-0043",
+    "diagnosis_id": "DGN-0043",
+    "decision_id": "DEC-0043",
+    "attempt_id": "ATT-0043",
+    "recommended_action": "stop",
+    "risk_level": "low",
+    "confidence": 0.21,
+    "action_priority": 0.6,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "Safety override triggered: Automated stop decision preserved from previous recovery stages. The AI orchestrator blocks automated execution.",
+    "next_state": "stopped",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_E_EXISTING_STOP"
+      ],
+      "reason": "Automated stop decision preserved from previous recovery stages."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0044",
+    "event_id": "EVT-0044",
+    "diagnosis_id": "DGN-0044",
+    "decision_id": "DEC-0044",
+    "attempt_id": "ATT-0044",
+    "recommended_action": "proceed_with_simulation",
+    "risk_level": "low",
+    "confidence": 0.35,
+    "action_priority": 0.61,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.29%, 1 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'technical failure' and recommends 'technical retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'proceed_with_simulation' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0045",
+    "event_id": "EVT-0045",
+    "diagnosis_id": "DGN-0045",
+    "decision_id": "DEC-0045",
+    "attempt_id": "ATT-0045",
+    "recommended_action": "delay_and_retry",
+    "risk_level": "high",
+    "confidence": 0.57,
+    "action_priority": 0.67,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.91%, 1 previous recovery attempts, and a high recoverability. The AI diagnosis identifies 'insufficient funds' and recommends 'delayed retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'delay_and_retry' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0046",
+    "event_id": "EVT-0046",
+    "diagnosis_id": "DGN-0046",
+    "decision_id": "DEC-0046",
+    "attempt_id": "ATT-0046",
+    "recommended_action": "proceed_with_simulation",
+    "risk_level": "high",
+    "confidence": 0.56,
+    "action_priority": 0.67,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.59%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'technical failure' and recommends 'technical retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'proceed_with_simulation' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0047",
+    "event_id": "EVT-0047",
+    "diagnosis_id": "DGN-0047",
+    "decision_id": "DEC-0047",
+    "attempt_id": "ATT-0047",
+    "recommended_action": "proceed_with_simulation",
+    "risk_level": "low",
+    "confidence": 0.46,
+    "action_priority": 0.63,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.29%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'technical failure' and recommends 'technical retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'proceed_with_simulation' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0048",
+    "event_id": "EVT-0048",
+    "diagnosis_id": "DGN-0048",
+    "decision_id": "DEC-0048",
+    "attempt_id": "ATT-0048",
+    "recommended_action": "delay_and_retry",
+    "risk_level": "low",
+    "confidence": 0.62,
+    "action_priority": 0.62,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.95%, 0 previous recovery attempts, and a high recoverability. The AI diagnosis identifies 'insufficient funds' and recommends 'delayed retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'delay_and_retry' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0049",
+    "event_id": "EVT-0049",
+    "diagnosis_id": "DGN-0049",
+    "decision_id": "DEC-0049",
+    "attempt_id": "ATT-0049",
+    "recommended_action": "request_payment_method_update",
+    "risk_level": "medium",
+    "confidence": 0.55,
+    "action_priority": 0.69,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.88%, 0 previous recovery attempts, and a high recoverability. The AI diagnosis identifies 'expired or invalid payment method' and recommends 'payment method update'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'request_payment_method_update' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0050",
+    "event_id": "EVT-0050",
+    "diagnosis_id": "DGN-0050",
+    "decision_id": "DEC-0050",
+    "attempt_id": "ATT-0050",
+    "recommended_action": "manual_review",
+    "risk_level": "high",
+    "confidence": 0.29,
+    "action_priority": 0.73,
+    "requires_human_review": true,
+    "human_review_reason": "Conflicting recovery signals detected across diagnosis and history.",
+    "reasoning": "Safety override triggered: Conflicting recovery signals detected across diagnosis and history. The AI orchestrator blocks automated execution.",
+    "next_state": "human_review_required",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_D_CONFLICTING_SIGNALS"
+      ],
+      "reason": "Conflicting recovery signals detected across diagnosis and history."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0051",
+    "event_id": "EVT-0051",
+    "diagnosis_id": "DGN-0051",
+    "decision_id": "DEC-0051",
+    "attempt_id": "ATT-0051",
+    "recommended_action": "proceed_with_simulation",
+    "risk_level": "high",
+    "confidence": 0.37,
+    "action_priority": 0.99,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.96%, 0 previous recovery attempts, and a high recoverability. The AI diagnosis identifies 'checkout friction' and recommends 'friction reducing nudge'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'proceed_with_simulation' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0052",
+    "event_id": "EVT-0052",
+    "diagnosis_id": "DGN-0052",
+    "decision_id": "DEC-0052",
+    "attempt_id": "ATT-0052",
+    "recommended_action": "proceed_with_simulation",
+    "risk_level": "low",
+    "confidence": 0.42,
+    "action_priority": 0.6,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.98%, 0 previous recovery attempts, and a high recoverability. The AI diagnosis identifies 'checkout friction' and recommends 'friction reducing nudge'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'proceed_with_simulation' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0053",
+    "event_id": "EVT-0053",
+    "diagnosis_id": "DGN-0053",
+    "decision_id": "DEC-0053",
+    "attempt_id": "ATT-0053",
+    "recommended_action": "delay_and_retry",
+    "risk_level": "high",
+    "confidence": 0.62,
+    "action_priority": 0.99,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.91%, 0 previous recovery attempts, and a high recoverability. The AI diagnosis identifies 'insufficient funds' and recommends 'delayed retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'delay_and_retry' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0054",
+    "event_id": "EVT-0054",
+    "diagnosis_id": "DGN-0054",
+    "decision_id": "DEC-0054",
+    "attempt_id": "ATT-0054",
+    "recommended_action": "delay_and_retry",
+    "risk_level": "low",
+    "confidence": 0.57,
+    "action_priority": 0.62,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.88%, 1 previous recovery attempts, and a high recoverability. The AI diagnosis identifies 'insufficient funds' and recommends 'delayed retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'delay_and_retry' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0055",
+    "event_id": "EVT-0055",
+    "diagnosis_id": "DGN-0055",
+    "decision_id": "DEC-0055",
+    "attempt_id": "ATT-0055",
+    "recommended_action": "stop",
+    "risk_level": "low",
+    "confidence": 0.26,
+    "action_priority": 0.63,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "Safety override triggered: Automated stop decision preserved from previous recovery stages. The AI orchestrator blocks automated execution.",
+    "next_state": "stopped",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_E_EXISTING_STOP"
+      ],
+      "reason": "Automated stop decision preserved from previous recovery stages."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0056",
+    "event_id": "EVT-0056",
+    "diagnosis_id": "DGN-0056",
+    "decision_id": "DEC-0056",
+    "attempt_id": "ATT-0056",
+    "recommended_action": "delay_and_retry",
+    "risk_level": "high",
+    "confidence": 0.46,
+    "action_priority": 1.0,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.54%, 1 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'insufficient funds' and recommends 'delayed retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'delay_and_retry' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0057",
+    "event_id": "EVT-0057",
+    "diagnosis_id": "DGN-0057",
+    "decision_id": "DEC-0057",
+    "attempt_id": "ATT-0057",
+    "recommended_action": "delay_and_retry",
+    "risk_level": "high",
+    "confidence": 0.43,
+    "action_priority": 0.6,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.29%, 2 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'insufficient funds' and recommends 'delayed retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'delay_and_retry' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0058",
+    "event_id": "EVT-0058",
+    "diagnosis_id": "DGN-0058",
+    "decision_id": "DEC-0058",
+    "attempt_id": "ATT-0058",
+    "recommended_action": "request_payment_method_update",
+    "risk_level": "low",
+    "confidence": 0.45,
+    "action_priority": 0.6,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.94%, 1 previous recovery attempts, and a high recoverability. The AI diagnosis identifies 'expired or invalid payment method' and recommends 'payment method update'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'request_payment_method_update' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0059",
+    "event_id": "EVT-0059",
+    "diagnosis_id": "DGN-0059",
+    "decision_id": "DEC-0059",
+    "attempt_id": "ATT-0059",
+    "recommended_action": "proceed_with_simulation",
+    "risk_level": "low",
+    "confidence": 0.34,
+    "action_priority": 0.64,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.52%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'checkout friction' and recommends 'friction reducing nudge'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'proceed_with_simulation' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0060",
+    "event_id": "EVT-0060",
+    "diagnosis_id": "DGN-0060",
+    "decision_id": "DEC-0060",
+    "attempt_id": "ATT-0060",
+    "recommended_action": "manual_review",
+    "risk_level": "high",
+    "confidence": 0.43,
+    "action_priority": 0.65,
+    "requires_human_review": true,
+    "human_review_reason": "Conflicting recovery signals detected across diagnosis and history.",
+    "reasoning": "Safety override triggered: Conflicting recovery signals detected across diagnosis and history. The AI orchestrator blocks automated execution.",
+    "next_state": "human_review_required",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_D_CONFLICTING_SIGNALS"
+      ],
+      "reason": "Conflicting recovery signals detected across diagnosis and history."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0061",
+    "event_id": "EVT-0061",
+    "diagnosis_id": "DGN-0061",
+    "decision_id": "DEC-0061",
+    "attempt_id": "ATT-0061",
+    "recommended_action": "request_payment_method_update",
+    "risk_level": "low",
+    "confidence": 0.55,
+    "action_priority": 0.6,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.98%, 0 previous recovery attempts, and a high recoverability. The AI diagnosis identifies 'expired or invalid payment method' and recommends 'payment method update'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'request_payment_method_update' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0062",
+    "event_id": "EVT-0062",
+    "diagnosis_id": "DGN-0062",
+    "decision_id": "DEC-0062",
+    "attempt_id": "ATT-0062",
+    "recommended_action": "delay_and_retry",
+    "risk_level": "low",
+    "confidence": 0.51,
+    "action_priority": 0.6,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.65%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'insufficient funds' and recommends 'delayed retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'delay_and_retry' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0063",
+    "event_id": "EVT-0063",
+    "diagnosis_id": "DGN-0063",
+    "decision_id": "DEC-0063",
+    "attempt_id": "ATT-0063",
+    "recommended_action": "stop",
+    "risk_level": "low",
+    "confidence": 0.15,
+    "action_priority": 0.6,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "Safety override triggered: Automated stop decision preserved from previous recovery stages. The AI orchestrator blocks automated execution.",
+    "next_state": "stopped",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_E_EXISTING_STOP"
+      ],
+      "reason": "Automated stop decision preserved from previous recovery stages."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0064",
+    "event_id": "EVT-0064",
+    "diagnosis_id": "DGN-0064",
+    "decision_id": "DEC-0064",
+    "attempt_id": "ATT-0064",
+    "recommended_action": "manual_review",
+    "risk_level": "high",
+    "confidence": 0.22,
+    "action_priority": 0.65,
+    "requires_human_review": true,
+    "human_review_reason": "Conflicting recovery signals detected across diagnosis and history.",
+    "reasoning": "Safety override triggered: Conflicting recovery signals detected across diagnosis and history. The AI orchestrator blocks automated execution.",
+    "next_state": "human_review_required",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_D_CONFLICTING_SIGNALS"
+      ],
+      "reason": "Conflicting recovery signals detected across diagnosis and history."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0065",
+    "event_id": "EVT-0065",
+    "diagnosis_id": "DGN-0065",
+    "decision_id": "DEC-0065",
+    "attempt_id": "ATT-0065",
+    "recommended_action": "request_payment_method_update",
+    "risk_level": "high",
+    "confidence": 0.44,
+    "action_priority": 0.76,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.9%, 0 previous recovery attempts, and a high recoverability. The AI diagnosis identifies 'cross border issuer risk' and recommends 'alternative payment method'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'request_payment_method_update' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0066",
+    "event_id": "EVT-0066",
+    "diagnosis_id": "DGN-0066",
+    "decision_id": "DEC-0066",
+    "attempt_id": "ATT-0066",
+    "recommended_action": "delay_and_retry",
+    "risk_level": "high",
+    "confidence": 0.56,
+    "action_priority": 1.0,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.56%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'insufficient funds' and recommends 'delayed retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'delay_and_retry' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0067",
+    "event_id": "EVT-0067",
+    "diagnosis_id": "DGN-0067",
+    "decision_id": "DEC-0067",
+    "attempt_id": "ATT-0067",
+    "recommended_action": "stop",
+    "risk_level": "low",
+    "confidence": 0.39,
+    "action_priority": 0.6,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "Safety override triggered: Automated stop decision preserved from previous recovery stages. The AI orchestrator blocks automated execution.",
+    "next_state": "stopped",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_E_EXISTING_STOP"
+      ],
+      "reason": "Automated stop decision preserved from previous recovery stages."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0068",
+    "event_id": "EVT-0068",
+    "diagnosis_id": "DGN-0068",
+    "decision_id": "DEC-0068",
+    "attempt_id": "ATT-0068",
+    "recommended_action": "proceed_with_simulation",
+    "risk_level": "low",
+    "confidence": 0.51,
+    "action_priority": 0.61,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.65%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'technical failure' and recommends 'technical retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'proceed_with_simulation' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0069",
+    "event_id": "EVT-0069",
+    "diagnosis_id": "DGN-0069",
+    "decision_id": "DEC-0069",
+    "attempt_id": "ATT-0069",
+    "recommended_action": "stop",
+    "risk_level": "low",
+    "confidence": 0.15,
+    "action_priority": 0.99,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "Safety override triggered: Automated stop decision preserved from previous recovery stages. The AI orchestrator blocks automated execution.",
+    "next_state": "stopped",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_E_EXISTING_STOP"
+      ],
+      "reason": "Automated stop decision preserved from previous recovery stages."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0070",
+    "event_id": "EVT-0070",
+    "diagnosis_id": "DGN-0070",
+    "decision_id": "DEC-0070",
+    "attempt_id": "ATT-0070",
+    "recommended_action": "proceed_with_simulation",
+    "risk_level": "high",
+    "confidence": 0.56,
+    "action_priority": 0.74,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.54%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'technical failure' and recommends 'technical retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'proceed_with_simulation' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0071",
+    "event_id": "EVT-0071",
+    "diagnosis_id": "DGN-0071",
+    "decision_id": "DEC-0071",
+    "attempt_id": "ATT-0071",
+    "recommended_action": "delay_and_retry",
+    "risk_level": "high",
+    "confidence": 0.38,
+    "action_priority": 0.64,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.46%, 2 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'insufficient funds' and recommends 'delayed retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'delay_and_retry' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0072",
+    "event_id": "EVT-0072",
+    "diagnosis_id": "DGN-0072",
+    "decision_id": "DEC-0072",
+    "attempt_id": "ATT-0072",
+    "recommended_action": "proceed_with_simulation",
+    "risk_level": "high",
+    "confidence": 0.32,
+    "action_priority": 0.64,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.91%, 1 previous recovery attempts, and a high recoverability. The AI diagnosis identifies 'checkout friction' and recommends 'friction reducing nudge'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'proceed_with_simulation' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0073",
+    "event_id": "EVT-0073",
+    "diagnosis_id": "DGN-0073",
+    "decision_id": "DEC-0073",
+    "attempt_id": "ATT-0073",
+    "recommended_action": "delay_and_retry",
+    "risk_level": "low",
+    "confidence": 0.56,
+    "action_priority": 0.6,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.27%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'insufficient funds' and recommends 'payment plan offer'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'delay_and_retry' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0074",
+    "event_id": "EVT-0074",
+    "diagnosis_id": "DGN-0074",
+    "decision_id": "DEC-0074",
+    "attempt_id": "ATT-0074",
+    "recommended_action": "request_payment_method_update",
+    "risk_level": "high",
+    "confidence": 0.5,
+    "action_priority": 0.67,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.88%, 1 previous recovery attempts, and a high recoverability. The AI diagnosis identifies 'expired or invalid payment method' and recommends 'payment method update'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'request_payment_method_update' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0075",
+    "event_id": "EVT-0075",
+    "diagnosis_id": "DGN-0075",
+    "decision_id": "DEC-0075",
+    "attempt_id": "ATT-0075",
+    "recommended_action": "request_payment_method_update",
+    "risk_level": "low",
+    "confidence": 0.19,
+    "action_priority": 0.64,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.6%, 1 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'cross border issuer risk' and recommends 'alternative payment method'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'request_payment_method_update' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0076",
+    "event_id": "EVT-0076",
+    "diagnosis_id": "DGN-0076",
+    "decision_id": "DEC-0076",
+    "attempt_id": "ATT-0076",
+    "recommended_action": "stop",
+    "risk_level": "low",
+    "confidence": 0.15,
+    "action_priority": 0.64,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "Safety override triggered: Automated stop decision preserved from previous recovery stages. The AI orchestrator blocks automated execution.",
+    "next_state": "stopped",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_E_EXISTING_STOP"
+      ],
+      "reason": "Automated stop decision preserved from previous recovery stages."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0077",
+    "event_id": "EVT-0077",
+    "diagnosis_id": "DGN-0077",
+    "decision_id": "DEC-0077",
+    "attempt_id": "ATT-0077",
+    "recommended_action": "request_payment_method_update",
+    "risk_level": "critical",
+    "confidence": 0.28,
+    "action_priority": 0.99,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.91%, 2 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'payment method mismatch' and recommends 'payment method update'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'request_payment_method_update' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0078",
+    "event_id": "EVT-0078",
+    "diagnosis_id": "DGN-0078",
+    "decision_id": "DEC-0078",
+    "attempt_id": "ATT-0078",
+    "recommended_action": "request_payment_method_update",
+    "risk_level": "low",
+    "confidence": 0.5,
+    "action_priority": 0.61,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.51%, 1 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'expired or invalid payment method' and recommends 'payment method update'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'request_payment_method_update' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0079",
+    "event_id": "EVT-0079",
+    "diagnosis_id": "DGN-0079",
+    "decision_id": "DEC-0079",
+    "attempt_id": "ATT-0079",
+    "recommended_action": "request_payment_method_update",
+    "risk_level": "high",
+    "confidence": 0.36,
+    "action_priority": 0.6,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.68%, 2 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'issuer risk flag' and recommends 'alternative payment method'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'request_payment_method_update' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0080",
+    "event_id": "EVT-0080",
+    "diagnosis_id": "DGN-0080",
+    "decision_id": "DEC-0080",
+    "attempt_id": "ATT-0080",
+    "recommended_action": "request_payment_method_update",
+    "risk_level": "low",
+    "confidence": 0.44,
+    "action_priority": 0.6,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.25%, 1 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'expired or invalid payment method' and recommends 'payment method update'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'request_payment_method_update' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0081",
+    "event_id": "EVT-0081",
+    "diagnosis_id": "DGN-0081",
+    "decision_id": "DEC-0081",
+    "attempt_id": "ATT-0081",
+    "recommended_action": "proceed_with_simulation",
+    "risk_level": "low",
+    "confidence": 0.42,
+    "action_priority": 0.62,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.84%, 0 previous recovery attempts, and a high recoverability. The AI diagnosis identifies 'checkout friction' and recommends 'friction reducing nudge'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'proceed_with_simulation' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0082",
+    "event_id": "EVT-0082",
+    "diagnosis_id": "DGN-0082",
+    "decision_id": "DEC-0082",
+    "attempt_id": "ATT-0082",
+    "recommended_action": "proceed_with_simulation",
+    "risk_level": "high",
+    "confidence": 0.49,
+    "action_priority": 0.63,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.6%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'checkout friction' and recommends 'friction reducing nudge'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'proceed_with_simulation' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0083",
+    "event_id": "EVT-0083",
+    "diagnosis_id": "DGN-0083",
+    "decision_id": "DEC-0083",
+    "attempt_id": "ATT-0083",
+    "recommended_action": "stop",
+    "risk_level": "low",
+    "confidence": 0.15,
+    "action_priority": 0.73,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "Safety override triggered: Automated stop decision preserved from previous recovery stages. The AI orchestrator blocks automated execution.",
+    "next_state": "stopped",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_E_EXISTING_STOP"
+      ],
+      "reason": "Automated stop decision preserved from previous recovery stages."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0084",
+    "event_id": "EVT-0084",
+    "diagnosis_id": "DGN-0084",
+    "decision_id": "DEC-0084",
+    "attempt_id": "ATT-0084",
+    "recommended_action": "stop",
+    "risk_level": "low",
+    "confidence": 0.15,
+    "action_priority": 0.62,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "Safety override triggered: Automated stop decision preserved from previous recovery stages. The AI orchestrator blocks automated execution.",
+    "next_state": "stopped",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_E_EXISTING_STOP"
+      ],
+      "reason": "Automated stop decision preserved from previous recovery stages."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0085",
+    "event_id": "EVT-0085",
+    "diagnosis_id": "DGN-0085",
+    "decision_id": "DEC-0085",
+    "attempt_id": "ATT-0085",
+    "recommended_action": "delay_and_retry",
+    "risk_level": "high",
+    "confidence": 0.67,
+    "action_priority": 0.63,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.91%, 0 previous recovery attempts, and a high recoverability. The AI diagnosis identifies 'insufficient funds' and recommends 'delayed retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'delay_and_retry' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0086",
+    "event_id": "EVT-0086",
+    "diagnosis_id": "DGN-0086",
+    "decision_id": "DEC-0086",
+    "attempt_id": "ATT-0086",
+    "recommended_action": "proceed_with_simulation",
+    "risk_level": "low",
+    "confidence": 0.51,
+    "action_priority": 0.61,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.5%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'technical failure' and recommends 'technical retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'proceed_with_simulation' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0087",
+    "event_id": "EVT-0087",
+    "diagnosis_id": "DGN-0087",
+    "decision_id": "DEC-0087",
+    "attempt_id": "ATT-0087",
+    "recommended_action": "manual_review",
+    "risk_level": "high",
+    "confidence": 0.27,
+    "action_priority": 0.63,
+    "requires_human_review": true,
+    "human_review_reason": "Conflicting recovery signals detected across diagnosis and history.",
+    "reasoning": "Safety override triggered: Conflicting recovery signals detected across diagnosis and history. The AI orchestrator blocks automated execution.",
+    "next_state": "human_review_required",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_D_CONFLICTING_SIGNALS"
+      ],
+      "reason": "Conflicting recovery signals detected across diagnosis and history."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0088",
+    "event_id": "EVT-0088",
+    "diagnosis_id": "DGN-0088",
+    "decision_id": "DEC-0088",
+    "attempt_id": "ATT-0088",
+    "recommended_action": "delay_and_retry",
+    "risk_level": "high",
+    "confidence": 0.57,
+    "action_priority": 0.63,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.91%, 1 previous recovery attempts, and a high recoverability. The AI diagnosis identifies 'insufficient funds' and recommends 'delayed retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'delay_and_retry' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0089",
+    "event_id": "EVT-0089",
+    "diagnosis_id": "DGN-0089",
+    "decision_id": "DEC-0089",
+    "attempt_id": "ATT-0089",
+    "recommended_action": "proceed_with_simulation",
+    "risk_level": "low",
+    "confidence": 0.49,
+    "action_priority": 0.61,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.66%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'checkout friction' and recommends 'friction reducing nudge'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'proceed_with_simulation' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0090",
+    "event_id": "EVT-0090",
+    "diagnosis_id": "DGN-0090",
+    "decision_id": "DEC-0090",
+    "attempt_id": "ATT-0090",
+    "recommended_action": "request_payment_method_update",
+    "risk_level": "high",
+    "confidence": 0.6,
+    "action_priority": 0.74,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.6%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'expired or invalid payment method' and recommends 'payment method update'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'request_payment_method_update' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0091",
+    "event_id": "EVT-0091",
+    "diagnosis_id": "DGN-0091",
+    "decision_id": "DEC-0091",
+    "attempt_id": "ATT-0091",
+    "recommended_action": "delay_and_retry",
+    "risk_level": "low",
+    "confidence": 0.46,
+    "action_priority": 0.61,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.68%, 1 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'insufficient funds' and recommends 'delayed retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'delay_and_retry' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0092",
+    "event_id": "EVT-0092",
+    "diagnosis_id": "DGN-0092",
+    "decision_id": "DEC-0092",
+    "attempt_id": "ATT-0092",
+    "recommended_action": "manual_review",
+    "risk_level": "high",
+    "confidence": 0.36,
+    "action_priority": 0.63,
+    "requires_human_review": true,
+    "human_review_reason": "Conflicting recovery signals detected across diagnosis and history.",
+    "reasoning": "Safety override triggered: Conflicting recovery signals detected across diagnosis and history. The AI orchestrator blocks automated execution.",
+    "next_state": "human_review_required",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_D_CONFLICTING_SIGNALS"
+      ],
+      "reason": "Conflicting recovery signals detected across diagnosis and history."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0093",
+    "event_id": "EVT-0093",
+    "diagnosis_id": "DGN-0093",
+    "decision_id": "DEC-0093",
+    "attempt_id": "ATT-0093",
+    "recommended_action": "stop",
+    "risk_level": "low",
+    "confidence": 0.18,
+    "action_priority": 1.0,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "Safety override triggered: Automated stop decision preserved from previous recovery stages. The AI orchestrator blocks automated execution.",
+    "next_state": "stopped",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_E_EXISTING_STOP"
+      ],
+      "reason": "Automated stop decision preserved from previous recovery stages."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0094",
+    "event_id": "EVT-0094",
+    "diagnosis_id": "DGN-0094",
+    "decision_id": "DEC-0094",
+    "attempt_id": "ATT-0094",
+    "recommended_action": "manual_review",
+    "risk_level": "high",
+    "confidence": 0.46,
+    "action_priority": 0.6,
+    "requires_human_review": true,
+    "human_review_reason": "Conflicting recovery signals detected across diagnosis and history.",
+    "reasoning": "Safety override triggered: Conflicting recovery signals detected across diagnosis and history. The AI orchestrator blocks automated execution.",
+    "next_state": "human_review_required",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_D_CONFLICTING_SIGNALS"
+      ],
+      "reason": "Conflicting recovery signals detected across diagnosis and history."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0095",
+    "event_id": "EVT-0095",
+    "diagnosis_id": "DGN-0095",
+    "decision_id": "DEC-0095",
+    "attempt_id": "ATT-0095",
+    "recommended_action": "proceed_with_simulation",
+    "risk_level": "medium",
+    "confidence": 0.41,
+    "action_priority": 0.77,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.78%, 1 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'technical failure' and recommends 'technical retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'proceed_with_simulation' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0096",
+    "event_id": "EVT-0096",
+    "diagnosis_id": "DGN-0096",
+    "decision_id": "DEC-0096",
+    "attempt_id": "ATT-0096",
+    "recommended_action": "request_payment_method_update",
+    "risk_level": "low",
+    "confidence": 0.6,
+    "action_priority": 0.6,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.29%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'expired or invalid payment method' and recommends 'payment method update'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'request_payment_method_update' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0097",
+    "event_id": "EVT-0097",
+    "diagnosis_id": "DGN-0097",
+    "decision_id": "DEC-0097",
+    "attempt_id": "ATT-0097",
+    "recommended_action": "delay_and_retry",
+    "risk_level": "low",
+    "confidence": 0.51,
+    "action_priority": 0.61,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.65%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'insufficient funds' and recommends 'delayed retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'delay_and_retry' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0098",
+    "event_id": "EVT-0098",
+    "diagnosis_id": "DGN-0098",
+    "decision_id": "DEC-0098",
+    "attempt_id": "ATT-0098",
+    "recommended_action": "delay_and_retry",
+    "risk_level": "high",
+    "confidence": 0.24,
+    "action_priority": 0.61,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.6%, 2 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'insufficient funds' and recommends 'payment plan offer'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'delay_and_retry' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0099",
+    "event_id": "EVT-0099",
+    "diagnosis_id": "DGN-0099",
+    "decision_id": "DEC-0099",
+    "attempt_id": "ATT-0099",
+    "recommended_action": "delay_and_retry",
+    "risk_level": "low",
+    "confidence": 0.63,
+    "action_priority": 0.64,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.23%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'insufficient funds' and recommends 'delayed retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'delay_and_retry' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0100",
+    "event_id": "EVT-0100",
+    "diagnosis_id": "DGN-0100",
+    "decision_id": "DEC-0100",
+    "attempt_id": "ATT-0100",
+    "recommended_action": "stop",
+    "risk_level": "low",
+    "confidence": 0.32,
+    "action_priority": 0.78,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "Safety override triggered: Automated stop decision preserved from previous recovery stages. The AI orchestrator blocks automated execution.",
+    "next_state": "stopped",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_E_EXISTING_STOP"
+      ],
+      "reason": "Automated stop decision preserved from previous recovery stages."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0101",
+    "event_id": "EVT-0101",
+    "diagnosis_id": "DGN-0101",
+    "decision_id": "DEC-0101",
+    "attempt_id": "ATT-0101",
+    "recommended_action": "delay_and_retry",
+    "risk_level": "low",
+    "confidence": 0.44,
+    "action_priority": 0.6,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.65%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'insufficient funds' and recommends 'payment plan offer'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'delay_and_retry' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0102",
+    "event_id": "EVT-0102",
+    "diagnosis_id": "DGN-0102",
+    "decision_id": "DEC-0102",
+    "attempt_id": "ATT-0102",
+    "recommended_action": "stop",
+    "risk_level": "low",
+    "confidence": 0.15,
+    "action_priority": 0.62,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "Safety override triggered: Automated stop decision preserved from previous recovery stages. The AI orchestrator blocks automated execution.",
+    "next_state": "stopped",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_E_EXISTING_STOP"
+      ],
+      "reason": "Automated stop decision preserved from previous recovery stages."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0103",
+    "event_id": "EVT-0103",
+    "diagnosis_id": "DGN-0103",
+    "decision_id": "DEC-0103",
+    "attempt_id": "ATT-0103",
+    "recommended_action": "delay_and_retry",
+    "risk_level": "low",
+    "confidence": 0.51,
+    "action_priority": 0.63,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.65%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'insufficient funds' and recommends 'delayed retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'delay_and_retry' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0104",
+    "event_id": "EVT-0104",
+    "diagnosis_id": "DGN-0104",
+    "decision_id": "DEC-0104",
+    "attempt_id": "ATT-0104",
+    "recommended_action": "request_payment_method_update",
+    "risk_level": "critical",
+    "confidence": 0.15,
+    "action_priority": 0.99,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.91%, 2 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'cross border issuer risk' and recommends 'alternative payment method'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'request_payment_method_update' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0105",
+    "event_id": "EVT-0105",
+    "diagnosis_id": "DGN-0105",
+    "decision_id": "DEC-0105",
+    "attempt_id": "ATT-0105",
+    "recommended_action": "request_payment_method_update",
+    "risk_level": "low",
+    "confidence": 0.6,
+    "action_priority": 0.64,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.29%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'expired or invalid payment method' and recommends 'payment method update'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'request_payment_method_update' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0106",
+    "event_id": "EVT-0106",
+    "diagnosis_id": "DGN-0106",
+    "decision_id": "DEC-0106",
+    "attempt_id": "ATT-0106",
+    "recommended_action": "proceed_with_simulation",
+    "risk_level": "medium",
+    "confidence": 0.24,
+    "action_priority": 0.77,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.51%, 1 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'checkout friction' and recommends 'friction reducing nudge'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'proceed_with_simulation' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0107",
+    "event_id": "EVT-0107",
+    "diagnosis_id": "DGN-0107",
+    "decision_id": "DEC-0107",
+    "attempt_id": "ATT-0107",
+    "recommended_action": "delay_and_retry",
+    "risk_level": "low",
+    "confidence": 0.63,
+    "action_priority": 0.63,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.39%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'insufficient funds' and recommends 'delayed retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'delay_and_retry' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0108",
+    "event_id": "EVT-0108",
+    "diagnosis_id": "DGN-0108",
+    "decision_id": "DEC-0108",
+    "attempt_id": "ATT-0108",
+    "recommended_action": "proceed_with_simulation",
+    "risk_level": "high",
+    "confidence": 0.42,
+    "action_priority": 0.69,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.92%, 0 previous recovery attempts, and a high recoverability. The AI diagnosis identifies 'checkout friction' and recommends 'friction reducing nudge'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'proceed_with_simulation' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0109",
+    "event_id": "EVT-0109",
+    "diagnosis_id": "DGN-0109",
+    "decision_id": "DEC-0109",
+    "attempt_id": "ATT-0109",
+    "recommended_action": "proceed_with_simulation",
+    "risk_level": "high",
+    "confidence": 0.37,
+    "action_priority": 0.67,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.9%, 0 previous recovery attempts, and a high recoverability. The AI diagnosis identifies 'checkout friction' and recommends 'friction reducing nudge'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'proceed_with_simulation' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0110",
+    "event_id": "EVT-0110",
+    "diagnosis_id": "DGN-0110",
+    "decision_id": "DEC-0110",
+    "attempt_id": "ATT-0110",
+    "recommended_action": "request_payment_method_update",
+    "risk_level": "low",
+    "confidence": 0.37,
+    "action_priority": 0.61,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.23%, 1 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'payment method mismatch' and recommends 'payment method update'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'request_payment_method_update' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0111",
+    "event_id": "EVT-0111",
+    "diagnosis_id": "DGN-0111",
+    "decision_id": "DEC-0111",
+    "attempt_id": "ATT-0111",
+    "recommended_action": "stop",
+    "risk_level": "low",
+    "confidence": 0.15,
+    "action_priority": 0.6,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "Safety override triggered: Automated stop decision preserved from previous recovery stages. The AI orchestrator blocks automated execution.",
+    "next_state": "stopped",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_E_EXISTING_STOP"
+      ],
+      "reason": "Automated stop decision preserved from previous recovery stages."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0112",
+    "event_id": "EVT-0112",
+    "diagnosis_id": "DGN-0112",
+    "decision_id": "DEC-0112",
+    "attempt_id": "ATT-0112",
+    "recommended_action": "proceed_with_simulation",
+    "risk_level": "high",
+    "confidence": 0.46,
+    "action_priority": 0.77,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.6%, 1 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'technical failure' and recommends 'technical retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'proceed_with_simulation' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0113",
+    "event_id": "EVT-0113",
+    "diagnosis_id": "DGN-0113",
+    "decision_id": "DEC-0113",
+    "attempt_id": "ATT-0113",
+    "recommended_action": "manual_review",
+    "risk_level": "high",
+    "confidence": 0.22,
+    "action_priority": 0.6,
+    "requires_human_review": true,
+    "human_review_reason": "Conflicting recovery signals detected across diagnosis and history.",
+    "reasoning": "Safety override triggered: Conflicting recovery signals detected across diagnosis and history. The AI orchestrator blocks automated execution.",
+    "next_state": "human_review_required",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_D_CONFLICTING_SIGNALS"
+      ],
+      "reason": "Conflicting recovery signals detected across diagnosis and history."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0114",
+    "event_id": "EVT-0114",
+    "diagnosis_id": "DGN-0114",
+    "decision_id": "DEC-0114",
+    "attempt_id": "ATT-0114",
+    "recommended_action": "proceed_with_simulation",
+    "risk_level": "high",
+    "confidence": 0.34,
+    "action_priority": 1.0,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.59%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'checkout friction' and recommends 'friction reducing nudge'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'proceed_with_simulation' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0115",
+    "event_id": "EVT-0115",
+    "diagnosis_id": "DGN-0115",
+    "decision_id": "DEC-0115",
+    "attempt_id": "ATT-0115",
+    "recommended_action": "proceed_with_simulation",
+    "risk_level": "high",
+    "confidence": 0.56,
+    "action_priority": 0.65,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.54%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'technical failure' and recommends 'technical retry'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'proceed_with_simulation' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0116",
+    "event_id": "EVT-0116",
+    "diagnosis_id": "DGN-0116",
+    "decision_id": "DEC-0116",
+    "attempt_id": "ATT-0116",
+    "recommended_action": "request_payment_method_update",
+    "risk_level": "low",
+    "confidence": 0.6,
+    "action_priority": 0.63,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.29%, 0 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'expired or invalid payment method' and recommends 'payment method update'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'request_payment_method_update' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0117",
+    "event_id": "EVT-0117",
+    "diagnosis_id": "DGN-0117",
+    "decision_id": "DEC-0117",
+    "attempt_id": "ATT-0117",
+    "recommended_action": "stop",
+    "risk_level": "low",
+    "confidence": 0.49,
+    "action_priority": 0.61,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "Safety override triggered: Automated stop decision preserved from previous recovery stages. The AI orchestrator blocks automated execution.",
+    "next_state": "stopped",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_E_EXISTING_STOP"
+      ],
+      "reason": "Automated stop decision preserved from previous recovery stages."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0118",
+    "event_id": "EVT-0118",
+    "diagnosis_id": "DGN-0118",
+    "decision_id": "DEC-0118",
+    "attempt_id": "ATT-0118",
+    "recommended_action": "stop",
+    "risk_level": "low",
+    "confidence": 0.15,
+    "action_priority": 0.61,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "Safety override triggered: Automated stop decision preserved from previous recovery stages. The AI orchestrator blocks automated execution.",
+    "next_state": "stopped",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_E_EXISTING_STOP"
+      ],
+      "reason": "Automated stop decision preserved from previous recovery stages."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0119",
+    "event_id": "EVT-0119",
+    "diagnosis_id": "DGN-0119",
+    "decision_id": "DEC-0119",
+    "attempt_id": "ATT-0119",
+    "recommended_action": "stop",
+    "risk_level": "low",
+    "confidence": 0.22,
+    "action_priority": 0.9,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "Safety override triggered: Automated stop decision preserved from previous recovery stages. The AI orchestrator blocks automated execution.",
+    "next_state": "stopped",
+    "policy_checks": {
+      "override_required": true,
+      "triggered_rules": [
+        "RULE_E_EXISTING_STOP"
+      ],
+      "reason": "Automated stop decision preserved from previous recovery stages."
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  },
+  {
+    "agent_run_id": "AGT-0120",
+    "event_id": "EVT-0120",
+    "diagnosis_id": "DGN-0120",
+    "decision_id": "DEC-0120",
+    "attempt_id": "ATT-0120",
+    "recommended_action": "request_payment_method_update",
+    "risk_level": "low",
+    "confidence": 0.46,
+    "action_priority": 0.62,
+    "requires_human_review": false,
+    "human_review_reason": null,
+    "reasoning": "The transaction has a strong historical success rate of 0.65%, 1 previous recovery attempts, and a medium recoverability. The AI diagnosis identifies 'issuer risk flag' and recommends 'alternative payment method'. No safety policy rules block automated recovery, so the agent recommends proceeding with 'request_payment_method_update' simulation.",
+    "next_state": "automated_simulation",
+    "policy_checks": {
+      "override_required": false,
+      "triggered_rules": [],
+      "reason": null
+    },
+    "execution_mode": "simulation",
+    "created_at": "2026-08-30T22:00:00Z"
+  }
+]

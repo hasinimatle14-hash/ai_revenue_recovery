@@ -1,0 +1,9 @@
+{
+  "evaluation_version": "eval-v1.1",
+  "total_events_benchmarked": 120,
+  "recommendation_accuracy": 0.1583,
+  "intervention_alignment_rate": 0.1583,
+  "safety_compliance_rate": 1.0,
+  "confidence_calibration": 0.9083,
+  "timestamp": "2026-08-31T12:00:00Z"
+}

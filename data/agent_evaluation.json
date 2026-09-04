@@ -1,0 +1,19 @@
+{
+  "evaluated_at": "2026-08-30T22:00:00Z",
+  "total_evaluations": 120,
+  "action_accuracy": 0.6083,
+  "average_confidence": 0.3965,
+  "high_confidence_total": 0,
+  "high_confidence_accuracy": 0.0,
+  "human_review_count": 14,
+  "human_review_precision": 0.4286,
+  "safety_override_count": 42,
+  "safety_override_rate": 0.35,
+  "stop_rule_matches": 0,
+  "risk_distribution": {
+    "low": 70,
+    "medium": 4,
+    "high": 43,
+    "critical": 3
+  }
+}

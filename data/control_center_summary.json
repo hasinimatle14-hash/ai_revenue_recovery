@@ -1,0 +1,140 @@
+{
+  "system_health": {
+    "status": "healthy",
+    "pipeline_completion_percentage": 100.0,
+    "total_events": 120,
+    "diagnosis_completion": 100.0,
+    "decision_completion": 100.0,
+    "execution_completion": 100.0,
+    "agent_processing_status": "completed",
+    "pending_human_reviews": 14,
+    "active_strategies": 4,
+    "audit_record_count": 989,
+    "warnings": [
+      "Elevated pending human review queue: 14 cases pending."
+    ],
+    "service_statuses": {
+      "revenue_events": "healthy",
+      "ai_diagnosis": "healthy",
+      "recovery_decision": "healthy",
+      "recovery_execution": "healthy",
+      "recovery_agent": "healthy",
+      "human_review": "healthy",
+      "adaptive_strategy": "healthy",
+      "analytics": "healthy",
+      "audit_trail": "healthy"
+    },
+    "last_health_check": "2026-09-03T12:00:00Z"
+  },
+  "revenue_at_risk": 4749347.69,
+  "simulated_recovered_revenue": 818885.39,
+  "simulated_recovery_rate": 0.1724,
+  "attempts_breakdown": {
+    "successful": 0,
+    "failed": 0,
+    "skipped": 29,
+    "blocked": 1
+  },
+  "agent_summary": {
+    "processed": 120,
+    "recommendations_created": 120
+  },
+  "human_review_summary": {
+    "total": 14,
+    "pending": 14,
+    "approved": 0,
+    "rejected": 0
+  },
+  "adaptive_strategy_status": {
+    "status": "ready",
+    "version": "strategy-v1.1",
+    "active_count": 4
+  },
+  "anomalies_summary": {
+    "detected_count": 3,
+    "open": 1,
+    "acknowledged": 1,
+    "resolved": 1
+  },
+  "governance_summary": {
+    "status": "compliant",
+    "compliance_percentage": 100.0,
+    "violations_count": 0
+  },
+  "pipeline_completion_percentage": 100.0,
+  "pipeline_stages": [
+    {
+      "stage": "Revenue Events",
+      "status": "completed",
+      "processed_count": 120,
+      "expected_count": 120,
+      "completion_percentage": 100.0,
+      "output_generated": "revenue_events.json"
+    },
+    {
+      "stage": "AI Diagnosis",
+      "status": "completed",
+      "processed_count": 120,
+      "expected_count": 120,
+      "completion_percentage": 100.0,
+      "output_generated": "diagnoses.json"
+    },
+    {
+      "stage": "Recovery Decision",
+      "status": "completed",
+      "processed_count": 120,
+      "expected_count": 120,
+      "completion_percentage": 100.0,
+      "output_generated": "recovery_decisions.json"
+    },
+    {
+      "stage": "Recovery Execution",
+      "status": "completed",
+      "processed_count": 120,
+      "expected_count": 120,
+      "completion_percentage": 100.0,
+      "output_generated": "recovery_attempts.json"
+    },
+    {
+      "stage": "AI Recovery Agent",
+      "status": "completed",
+      "processed_count": 120,
+      "expected_count": 120,
+      "completion_percentage": 100.0,
+      "output_generated": "agent_runs.json"
+    },
+    {
+      "stage": "Human Review Queue",
+      "status": "completed",
+      "processed_count": 14,
+      "expected_count": 14,
+      "completion_percentage": 100.0,
+      "output_generated": "human_reviews.json"
+    },
+    {
+      "stage": "Adaptive Strategy",
+      "status": "completed",
+      "processed_count": 4,
+      "expected_count": 4,
+      "completion_percentage": 100.0,
+      "output_generated": "adaptive_strategies.json"
+    },
+    {
+      "stage": "Analytics",
+      "status": "completed",
+      "processed_count": 120,
+      "expected_count": 120,
+      "completion_percentage": 100.0,
+      "output_generated": "analytics_summary.json"
+    },
+    {
+      "stage": "Audit Trail",
+      "status": "completed",
+      "processed_count": 120,
+      "expected_count": 120,
+      "completion_percentage": 100.0,
+      "output_generated": "audit_trail.json"
+    }
+  ],
+  "last_pipeline_update": "2026-09-03T12:00:00Z"
+}

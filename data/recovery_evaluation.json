@@ -1,0 +1,8 @@
+{
+  "total_events": 120,
+  "intervention_accuracy": 0.742,
+  "recoverability_alignment": 0.817,
+  "stopping_rule_accuracy": 0.858,
+  "average_priority_score": 0.347,
+  "recoverable_event_coverage": 0.879
+}

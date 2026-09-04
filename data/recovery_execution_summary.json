@@ -1,0 +1,13 @@
+{
+  "total_events": 120,
+  "attempts_created": 120,
+  "successful_recoveries": 59,
+  "failed_attempts": 31,
+  "skipped_events": 29,
+  "blocked_events": 1,
+  "simulated_revenue_recovered": 1696224.6,
+  "total_revenue_at_risk": 4749347.69,
+  "recovery_rate": 0.6556,
+  "overall_event_recovery_rate": 0.4917,
+  "recovery_value_percentage": 0.3571
+}

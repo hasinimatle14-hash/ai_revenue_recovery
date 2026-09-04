@@ -1,0 +1,71 @@
+[
+  {
+    "strategy_id": "STR-0001",
+    "cohort": "general_payment_failures",
+    "applicable_root_causes": [
+      "unknown",
+      "other"
+    ],
+    "recommended_intervention": "stop",
+    "recommended_timing": "immediate",
+    "expected_success_rate": 0.0,
+    "expected_recovery_value_rate": 0.0,
+    "confidence": 0.0,
+    "sample_size": 25,
+    "reasoning": "Analyzing 25 simulated cases in cohort 'general_payment_failures' reveals that 'stop' achieves a success rate of 0% with a value yield of 0%.",
+    "strategy_version": "strategy-v1.0",
+    "created_at": "2026-08-31T12:00:00Z",
+    "status": "active"
+  },
+  {
+    "strategy_id": "STR-0002",
+    "cohort": "insufficient_funds_cross_border",
+    "applicable_root_causes": [
+      "insufficient_funds"
+    ],
+    "recommended_intervention": "delayed_retry",
+    "recommended_timing": "delay_24h",
+    "expected_success_rate": 0.0,
+    "expected_recovery_value_rate": 0.0,
+    "confidence": 0.0,
+    "sample_size": 6,
+    "reasoning": "Analyzing 6 simulated cases in cohort 'insufficient_funds_cross_border' reveals that 'delayed_retry' achieves a success rate of 0% with a value yield of 0%.",
+    "strategy_version": "strategy-v1.0",
+    "created_at": "2026-08-31T12:00:00Z",
+    "status": "active"
+  },
+  {
+    "strategy_id": "STR-0003",
+    "cohort": "insufficient_funds_domestic_high_value",
+    "applicable_root_causes": [
+      "insufficient_funds"
+    ],
+    "recommended_intervention": "delayed_retry",
+    "recommended_timing": "delay_24h",
+    "expected_success_rate": 0.0,
+    "expected_recovery_value_rate": 0.0,
+    "confidence": 0.0,
+    "sample_size": 4,
+    "reasoning": "Analyzing 4 simulated cases in cohort 'insufficient_funds_domestic_high_value' reveals that 'delayed_retry' achieves a success rate of 0% with a value yield of 0%.",
+    "strategy_version": "strategy-v1.0",
+    "created_at": "2026-08-31T12:00:00Z",
+    "status": "active"
+  },
+  {
+    "strategy_id": "STR-0004",
+    "cohort": "insufficient_funds_domestic_low_value",
+    "applicable_root_causes": [
+      "insufficient_funds"
+    ],
+    "recommended_intervention": "delayed_retry",
+    "recommended_timing": "delay_24h",
+    "expected_success_rate": 0.0,
+    "expected_recovery_value_rate": 0.0,
+    "confidence": 0.0,
+    "sample_size": 9,
+    "reasoning": "Analyzing 9 simulated cases in cohort 'insufficient_funds_domestic_low_value' reveals that 'delayed_retry' achieves a success rate of 0% with a value yield of 0%.",
+    "strategy_version": "strategy-v1.0",
+    "created_at": "2026-08-31T12:00:00Z",
+    "status": "active"
+  }
+]

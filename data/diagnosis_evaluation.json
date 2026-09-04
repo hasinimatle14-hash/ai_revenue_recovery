@@ -1,0 +1,31 @@
+{
+  "total_events": 120,
+  "root_cause_accuracy": 0.883,
+  "intervention_accuracy": 0.792,
+  "recoverability_accuracy": 0.533,
+  "average_confidence": 0.726,
+  "high_confidence_precision": 1.0,
+  "high_confidence_total": 48,
+  "high_confidence_correct": 48,
+  "diagnosed_distribution": {
+    "genuine_non_payment_intent": 29,
+    "technical_failure": 16,
+    "insufficient_funds": 29,
+    "expired_or_invalid_payment_method": 19,
+    "issuer_risk_flag": 3,
+    "timezone_timing_issue": 2,
+    "checkout_friction": 15,
+    "payment_method_mismatch": 4,
+    "cross_border_issuer_risk": 3
+  },
+  "ground_truth_distribution": {
+    "genuine_non_payment_intent": 25,
+    "technical_failure": 24,
+    "insufficient_funds": 29,
+    "expired_or_invalid_payment_method": 19,
+    "issuer_risk_flag": 3,
+    "checkout_friction": 15,
+    "payment_method_mismatch": 4,
+    "cross_border_issuer_risk": 1
+  }
+}

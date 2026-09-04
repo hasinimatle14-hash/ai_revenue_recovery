@@ -1,0 +1,11 @@
+{
+  "evaluated_at": "2026-08-30T22:00:00Z",
+  "total_reviews": 14,
+  "pending_reviews": 14,
+  "approved_reviews": 0,
+  "rejected_reviews": 0,
+  "review_completion_rate": 0.0,
+  "review_decision_accuracy": 1.0,
+  "safety_compliance_rate": 1.0,
+  "simulated_recovery_impact_inr": 0.0
+}

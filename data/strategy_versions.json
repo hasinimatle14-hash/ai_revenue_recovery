@@ -1,0 +1,31 @@
+[
+  {
+    "version": "strategy-v1.0",
+    "released_at": "2026-08-30T10:00:00Z",
+    "description": "Initial baseline recovery strategies compiled from diagnosis and recovery simulation runs.",
+    "changes_count": 0,
+    "changes": []
+  },
+  {
+    "version": "strategy-v1.1",
+    "released_at": "2026-08-31T12:00:00Z",
+    "description": "Adaptive cohort optimization. Re-allocated high-value domestic retries to 24h intervals, achieving improved recovery value yields.",
+    "changes_count": 2,
+    "changes": [
+      {
+        "cohort": "insufficient_funds_domestic_high_value",
+        "previous_timing": "delay_12h",
+        "new_timing": "delay_24h",
+        "performance_difference": "+5.4% recovery rate improvement",
+        "reason_for_change": "Higher bank balance resolution yield during weekend and end-of-month cycles."
+      },
+      {
+        "cohort": "card_credentials_domestic",
+        "previous_timing": "delay_4h",
+        "new_timing": "delay_1h",
+        "performance_difference": "+3.1% success rate improvement",
+        "reason_for_change": "Closer proximity to user session increases response rates for link updates."
+      }
+    ]
+  }
+]

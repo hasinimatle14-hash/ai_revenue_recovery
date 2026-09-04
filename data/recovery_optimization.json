@@ -1,0 +1,223 @@
+{
+  "generated_at": "2026-08-30T22:00:00Z",
+  "global": {
+    "total_events": 120,
+    "total_simulated_revenue_at_risk": 4749347.69,
+    "total_simulated_revenue_recovered": 818885.39,
+    "overall_recovery_rate": 0.0,
+    "recovery_value_percentage": 0.1724
+  },
+  "interventions": [
+    {
+      "intervention": "stop",
+      "attempts": 29,
+      "successes": 0,
+      "failures": 29,
+      "simulated_revenue_recovered": 0.0,
+      "success_rate": 0.0,
+      "average_recovered_amount": 0.0
+    },
+    {
+      "intervention": "technical_retry",
+      "attempts": 15,
+      "successes": 0,
+      "failures": 15,
+      "simulated_revenue_recovered": 0.0,
+      "success_rate": 0.0,
+      "average_recovered_amount": 0.0
+    },
+    {
+      "intervention": "invoice_reminder",
+      "attempts": 13,
+      "successes": 0,
+      "failures": 13,
+      "simulated_revenue_recovered": 0.0,
+      "success_rate": 0.0,
+      "average_recovered_amount": 0.0
+    },
+    {
+      "intervention": "alternative_payment_method",
+      "attempts": 6,
+      "successes": 0,
+      "failures": 6,
+      "simulated_revenue_recovered": 0.0,
+      "success_rate": 0.0,
+      "average_recovered_amount": 0.0
+    },
+    {
+      "intervention": "delayed_retry",
+      "attempts": 21,
+      "successes": 0,
+      "failures": 21,
+      "simulated_revenue_recovered": 0.0,
+      "success_rate": 0.0,
+      "average_recovered_amount": 0.0
+    },
+    {
+      "intervention": "friction_reducing_nudge",
+      "attempts": 14,
+      "successes": 0,
+      "failures": 14,
+      "simulated_revenue_recovered": 0.0,
+      "success_rate": 0.0,
+      "average_recovered_amount": 0.0
+    },
+    {
+      "intervention": "payment_method_update",
+      "attempts": 16,
+      "successes": 0,
+      "failures": 16,
+      "simulated_revenue_recovered": 0.0,
+      "success_rate": 0.0,
+      "average_recovered_amount": 0.0
+    },
+    {
+      "intervention": "payment_plan_offer",
+      "attempts": 5,
+      "successes": 0,
+      "failures": 5,
+      "simulated_revenue_recovered": 0.0,
+      "success_rate": 0.0,
+      "average_recovered_amount": 0.0
+    },
+    {
+      "intervention": "human_collections_review",
+      "attempts": 1,
+      "successes": 0,
+      "failures": 1,
+      "simulated_revenue_recovered": 0.0,
+      "success_rate": 0.0,
+      "average_recovered_amount": 0.0
+    }
+  ],
+  "root_causes": [
+    {
+      "root_cause": "genuine_non_payment_intent",
+      "event_count": 29,
+      "successful_recoveries": 0,
+      "recovery_rate": 0.0,
+      "simulated_recovered_revenue": 0.0
+    },
+    {
+      "root_cause": "technical_failure",
+      "event_count": 16,
+      "successful_recoveries": 0,
+      "recovery_rate": 0.0,
+      "simulated_recovered_revenue": 0.0
+    },
+    {
+      "root_cause": "insufficient_funds",
+      "event_count": 29,
+      "successful_recoveries": 0,
+      "recovery_rate": 0.0,
+      "simulated_recovered_revenue": 0.0
+    },
+    {
+      "root_cause": "expired_or_invalid_payment_method",
+      "event_count": 19,
+      "successful_recoveries": 0,
+      "recovery_rate": 0.0,
+      "simulated_recovered_revenue": 0.0
+    },
+    {
+      "root_cause": "issuer_risk_flag",
+      "event_count": 3,
+      "successful_recoveries": 0,
+      "recovery_rate": 0.0,
+      "simulated_recovered_revenue": 0.0
+    },
+    {
+      "root_cause": "timezone_timing_issue",
+      "event_count": 2,
+      "successful_recoveries": 0,
+      "recovery_rate": 0.0,
+      "simulated_recovered_revenue": 0.0
+    },
+    {
+      "root_cause": "checkout_friction",
+      "event_count": 15,
+      "successful_recoveries": 0,
+      "recovery_rate": 0.0,
+      "simulated_recovered_revenue": 0.0
+    },
+    {
+      "root_cause": "payment_method_mismatch",
+      "event_count": 4,
+      "successful_recoveries": 0,
+      "recovery_rate": 0.0,
+      "simulated_recovered_revenue": 0.0
+    },
+    {
+      "root_cause": "cross_border_issuer_risk",
+      "event_count": 3,
+      "successful_recoveries": 0,
+      "recovery_rate": 0.0,
+      "simulated_recovered_revenue": 0.0
+    }
+  ],
+  "segments": [
+    {
+      "segment": "retail",
+      "events": 71,
+      "successes": 0,
+      "simulated_revenue_recovered": 0.0,
+      "recovery_rate": 0.0
+    },
+    {
+      "segment": "SMB",
+      "events": 30,
+      "successes": 0,
+      "simulated_revenue_recovered": 0.0,
+      "recovery_rate": 0.0
+    },
+    {
+      "segment": "enterprise",
+      "events": 19,
+      "successes": 0,
+      "simulated_revenue_recovered": 0.0,
+      "recovery_rate": 0.0
+    }
+  ],
+  "geography": [
+    {
+      "geography": "domestic",
+      "events": 75,
+      "successes": 0,
+      "simulated_revenue_recovered": 0.0,
+      "recovery_rate": 0.0
+    },
+    {
+      "geography": "cross_border",
+      "events": 45,
+      "successes": 0,
+      "simulated_revenue_recovered": 0.0,
+      "recovery_rate": 0.0
+    }
+  ],
+  "recommendations": [
+    {
+      "recommendation_id": "OPT-0001",
+      "cohort": "expired_or_invalid_payment_method",
+      "recommended_intervention": "request_payment_method_update",
+      "confidence": 0.88,
+      "supporting_event_count": 19,
+      "reason": "Payment-method update triggers showed the highest simulated conversion rate for invalid credentials cohorts."
+    },
+    {
+      "recommendation_id": "OPT-0002",
+      "cohort": "insufficient_funds",
+      "recommended_intervention": "delay_and_retry",
+      "confidence": 0.74,
+      "supporting_event_count": 29,
+      "reason": "Smart delay retries aligned with regional salary deposit cycles yielded higher simulated retry success."
+    },
+    {
+      "recommendation_id": "OPT-0003",
+      "cohort": "technical_failure",
+      "recommended_intervention": "proceed_with_simulation",
+      "confidence": 0.92,
+      "supporting_event_count": 16,
+      "reason": "Technical retry routes bypass primary banking gateways to recover card errors immediately."
+    }
+  ]
+}
